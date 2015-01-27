@@ -1,0 +1,7 @@
+{
+  "name": "ESG-Leipzig-Homepage-2015",
+  "private": true,
+  "devDependencies": {
+    "bower": "~1.3.12"
+  }
+}
