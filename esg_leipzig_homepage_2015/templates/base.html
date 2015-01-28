@@ -1,8 +1,6 @@
-{% load flatpages %}
+{% load custom_templatetags %}
 {% load i18n %}
 {% load staticfiles %}
-
-{% get_flatpages as flatpages %}
 
 <!DOCTYPE html>
 <html lang="de">
@@ -48,7 +46,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="{% url 'home' %}">{% trans 'Startseite' %}</a></li>
                             {% for page in flatpages %}
-                                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                                <li><a href="{% url 'flatpage' page.slug %}">{{ page.title }}</a></li>
                             {% endfor %}
                         </ul>
                     </div><!-- /.nav-collapse -->
@@ -78,7 +76,9 @@
                     <div class="list-group">
                         {% block main_menu %}
                             {% for page in flatpages %}
-                                <a href="{{ page.url }}" class="list-group-item">{{ page.title }}</a>
+                                <a href="{% url 'flatpage' page.slug %}" class="list-group-item{% is_active page %}">
+                                    {{ page.title }}
+                                </a>
                             {% endfor %}
                         {% endblock %}
                     </div>
