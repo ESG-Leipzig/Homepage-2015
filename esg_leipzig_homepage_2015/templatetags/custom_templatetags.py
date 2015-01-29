@@ -1,6 +1,7 @@
 import re
 
 from django import template
+from django.utils.translation import ugettext as _
 
 register = template.Library()
 
@@ -16,3 +17,11 @@ def is_active(context, flatpage):
     else:
         result = ''
     return result
+
+
+@register.simple_tag()
+def copyright_note():
+    """
+    TODO
+    """
+    return '2015 %s' % _('Evangelische Studierendengemeinde Leipzig')

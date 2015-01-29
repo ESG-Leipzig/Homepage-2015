@@ -18,12 +18,34 @@ class FlatPage(models.Model):
         help_text=ugettext_lazy(
             "Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs "
             "angezeigt."))
+    is_in_navbar = models.BooleanField(
+        ugettext_lazy('In der oberen Navigationsleiste'),
+        blank=True,
+        default=False)
+    is_in_main_menu = models.BooleanField(
+        ugettext_lazy('Im rechten Hauptmenü'),
+        blank=True,
+        default=True)
+    header_image_url = models.CharField(
+        ugettext_lazy('URL zum Titelbild'),
+        max_length=255,
+        blank=True,
+        help_text=ugettext_lazy(
+            "Beispiel: '/static/custom/myimage.jpg'. Die Bilddatei muss "
+            "manuell auf den Server geladen werden."))
+    headline = models.CharField(
+        ugettext_lazy('Schlagzeile'),
+        max_length=255,
+        blank=True,
+        help_text=ugettext_lazy(
+            "Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. "
+            "Die Schlagzeile wird unter dem Titelbild angezeigt."))
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
         help_text=ugettext_lazy("Beispiel: '<div></div>'."))
     weight = models.IntegerField(
-        ugettext_lazy('Gewicht'),
+        ugettext_lazy('Platzierung'),
         default=100,
         help_text=ugettext_lazy(
             'Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter '

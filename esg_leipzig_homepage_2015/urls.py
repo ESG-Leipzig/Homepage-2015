@@ -7,7 +7,7 @@ from . import views
 urlpatterns = patterns(
     '',
     url(r'^$',
-        generic.TemplateView.as_view(template_name='home.html'),
+        views.HomeView.as_view(),
         name='home'),
     url(r'^admin/',
         include(admin.site.urls)),
