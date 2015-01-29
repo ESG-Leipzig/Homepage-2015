@@ -87,7 +87,7 @@
                             {% block main_menu %}
                                 {% for flatpage in flatpages %}
                                     {% if flatpage.is_in_main_menu %}
-                                        <a href="{{ flatpage.get_absolute_url }}" class="list-group-item{% is_active flatpage %}">
+                                        <a href="{{ flatpage.get_absolute_url }}" class="list-group-item{% is_active_string flatpage %}">
                                             {{ flatpage.title }}
                                         </a>
                                     {% endif %}

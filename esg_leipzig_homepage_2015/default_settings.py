@@ -93,13 +93,19 @@ STATIC_ROOT = os.path.dirname(__file__)
 # Miscellaneous entries
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.tz",
-    "django.contrib.messages.context_processors.messages",
-
-    "django.core.context_processors.request",
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.request',
+    'esg_leipzig_homepage_2015.context_processors.flatpages',
 )
+
+FORMAT_MODULE_PATH = 'esg_leipzig_homepage_2015.formats'
+
+# Used in views.HomeView to decide how many minutes events are shown after
+# beginning.
+EVENT_DELAY_IN_MINUTES = 180

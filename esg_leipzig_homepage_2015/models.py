@@ -1,5 +1,8 @@
+import datetime
+
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils.formats import localize
 from django.utils.translation import ugettext_lazy
 
 
@@ -55,8 +58,9 @@ class FlatPage(models.Model):
         max_length=255,
         blank=True,
         help_text=ugettext_lazy(
-            "Beispiel: 'meine_seite.html'. Wenn nicht anders angegeben wird "
-            "die Vorlage 'flatpage_default.html' verwendet."))
+            "Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches "
+            "angegeben ist, wird die Vorlage 'flatpage_default.html' "
+            "verwendet."))
 
     class Meta:
         ordering = ('weight', 'slug',)
@@ -68,3 +72,37 @@ class FlatPage(models.Model):
 
     def get_absolute_url(self):
         return reverse('flatpage', args=[self.slug])
+
+
+class Event(models.Model):
+    """
+    Model for events that appear in the calendar.
+    """
+    title = models.CharField(
+        ugettext_lazy('Titel'),
+        max_length=255,
+        help_text=ugettext_lazy(
+            "Beispiel: 'ESG-Gottesdienst mit Abendmahl'."))
+    content = models.TextField(
+        ugettext_lazy('Inhalt (HTML)'),
+        blank=True,
+        help_text=ugettext_lazy("Beispiel: '<div></div>'."))
+    begin = models.DateTimeField(
+        ugettext_lazy('Beginn'),
+        help_text=ugettext_lazy("Beispiel: '2013-07-20 14:00'."))
+    duration = models.PositiveIntegerField(
+        ugettext_lazy('Dauer in Minuten'),
+        default=90,
+        help_text=ugettext_lazy("Ein Tag hat 1440 Minuten."))
+
+    class Meta:
+        ordering = ('begin',)
+        verbose_name = ugettext_lazy('Veranstaltung')
+        verbose_name_plural = ugettext_lazy('Veranstaltungen')
+
+    def __str__(self):
+        return ' – '.join((localize(self.begin), self.title))
+
+    @property
+    def end(self):
+        return self.begin + datetime.timedelta(minutes=self.duration)

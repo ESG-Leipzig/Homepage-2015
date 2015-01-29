@@ -1,27 +1,34 @@
+import datetime
+
+from django.conf import settings
+from django.utils import timezone
 from django.views import generic
 
-from .models import FlatPage
+from .models import Event, FlatPage
 
-class HomeView(generic.TemplateView):
+
+class HomeView(generic.ListView):
     """
-    TODO
+    View for the first page called 'Home'.
     """
+    model = Event
     template_name = 'home.html'
 
-    def get_context_data(self, **context):
-        context = super().get_context_data(**context)
-        context['flatpages'] = FlatPage.objects.all()
-        return context
+    def get_queryset(self):
+        hiding_time = timezone.now() - datetime.timedelta(
+            minutes=settings.EVENT_DELAY_IN_MINUTES)
+        return super().get_queryset().filter(begin__gte=hiding_time)
 
 
 class FlatPageView(generic.DetailView):
     """
-    TODO
+    View for static pages.
     """
     model = FlatPage
-    template_name = 'flatpage_default.html'
 
-    def get_context_data(self, **context):
-        context = super().get_context_data(**context)
-        context['flatpages'] = FlatPage.objects.all()
-        return context
+    def get_template_names(self):
+        template_names = []
+        if self.object.template_name:
+            template_names.append(self.object.template_name)
+        template_names.append('flatpage_default.html')
+        return template_names
