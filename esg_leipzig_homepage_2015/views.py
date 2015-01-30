@@ -55,3 +55,17 @@ class FlatPageView(generic.DetailView):
             template_names.append(self.object.template_name)
         template_names.append('flatpage_default.html')
         return template_names
+
+    def get_context_data(self, **context):
+        """
+        Returns the template context. Adds breadcrumb to it.
+        """
+        context = super().get_context_data(**context)
+        parent = context['flatpage'].parent
+        breadcrumb_list = [context['flatpage']]
+        while parent is not None:
+            breadcrumb_list.append(parent)
+            parent = parent.parent
+        breadcrumb_list.reverse()
+        context['breadcrumb_list'] = breadcrumb_list
+        return context

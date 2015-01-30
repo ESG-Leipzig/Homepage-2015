@@ -96,6 +96,15 @@
                                 {% block jumbotron_inner %}{% endblock %}
                             </div>
                         {% endblock %}
+                        <ol class="breadcrumb" role="navigation">
+                            {% for flatpage in breadcrumb_list %}
+                                {% if not forloop.last %}
+                                    <li><a href="{{ flatpage.get_absolute_url }}">{{ flatpage.title }}</a></li>
+                                {% else %}
+                                    <li class="active">{{ flatpage.title }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
                         {% block main_content %}{% endblock %}
                     </div><!-- /#main_content -->
                     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
