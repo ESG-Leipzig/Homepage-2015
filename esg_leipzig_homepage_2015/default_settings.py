@@ -41,6 +41,7 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -67,7 +68,15 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
+from django.utils.translation import ugettext_lazy
+
 LANGUAGE_CODE = 'de'
+
+LANGUAGES = (
+    ('de', ugettext_lazy('Deutsch')),
+    ('en', ugettext_lazy('Englisch')),
+    ('fr', ugettext_lazy('Französisch')),
+)
 
 TIME_ZONE = 'Europe/Berlin'
 
