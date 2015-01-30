@@ -46,7 +46,7 @@ class FlatPage(models.Model):
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        help_text=ugettext_lazy("Beispiel: '<div></div>'."))
+        help_text=ugettext_lazy('Es können alle HTML-Tags verwendet werden.'))
     weight = models.IntegerField(
         ugettext_lazy('Platzierung'),
         default=100,
@@ -86,13 +86,14 @@ class Event(models.Model):
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        help_text=ugettext_lazy("Beispiel: '<div></div>'."))
+        help_text=ugettext_lazy('Es können alle HTML-Tags verwendet werden.'))
     begin = models.DateTimeField(
         ugettext_lazy('Beginn'),
         help_text=ugettext_lazy("Beispiel: '2013-07-20 14:00'."))
     duration = models.PositiveIntegerField(
         ugettext_lazy('Dauer in Minuten'),
-        default=90,
+        null=True,
+        blank=True,
         help_text=ugettext_lazy("Ein Tag hat 1440 Minuten."))
 
     class Meta:
@@ -105,4 +106,5 @@ class Event(models.Model):
 
     @property
     def end(self):
-        return self.begin + datetime.timedelta(minutes=self.duration)
+        duration = self.duration or 0
+        return self.begin + datetime.timedelta(minutes=duration)

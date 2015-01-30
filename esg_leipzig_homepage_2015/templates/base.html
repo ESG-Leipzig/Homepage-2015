@@ -37,7 +37,7 @@
             <a href="#main_content" class="sr-only">{% trans 'Zum Inhalt springen' %}</a>
             <a href="#sidebar" class="sr-only">{% trans 'Zum Menü springen' %}</a>
             {% block navbar %}
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -98,7 +98,7 @@
                         {% endblock %}
                         {% block main_content %}{% endblock %}
                     </div><!-- /#main_content -->
-                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
                         <div class="list-group">
                             {% block main_menu %}
                                 {% for flatpage in flatpages %}
@@ -114,7 +114,7 @@
                 </div><!-- /row -->
                 <hr>
                 <footer>
-                    <p>&copy; {% copyright_note %}</p>
+                    <p>&copy; {% copyright_note %} <a href="{% url 'admin:index' %}" class="pull-right">{% trans 'Administration' %}</a></p>
                 </footer>
             </div><!-- /.container -->
         {% endblock %}
@@ -126,7 +126,7 @@
             <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
             <script>
                 $(document).ready(function () {
-                    // Trigger submit event when user chooses a language
+                    // Trigger submit event when user chooses a language.
                     $('#language-form option').click(function () {
                         $(this).parents('form').submit();
                     });

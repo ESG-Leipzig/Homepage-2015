@@ -14,7 +14,7 @@
     <a href="#main_content" class="sr-only">{% trans 'Zum Inhalt springen' %}</a>
     <div class="container">
         <div class="header">
-            <nav>
+            <nav role="navigation">
                 <ul class="nav nav-pills pull-right">
                     {% for flatpage in flatpages %}
                         {% if flatpage.is_in_navbar %}
@@ -27,21 +27,30 @@
         </div><!-- /.header -->
         <div class="jumbotron">
             <h1>ESG Leipzig</h1>
-            <p class="lead">Evangelische Studierendengemeinde Leipzig</p>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+            <p class="lead">
+                {% trans 'Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde (ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich.' %}
+            </p>
+            <p>
+                <a class="btn btn-lg btn-primary" href="{{ flatpages.0.get_absolute_url }}">
+                    {% trans 'Weiter gehts hier' %} <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                </a>
+            </p>
         </div><!-- /.jumbotron -->
         <div class="row marketing">
             {% for event in event_list %}
                 <div class="col-lg-6">
-                    <h4>{{ event.title }}</h4>
-                    <p>{{ event.begin }} – {{ event.end }}</p>
+                    <h3>{{ event.title }}</h3>
+                    <p>
+                        <span class="label label-primary">
+                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
+                        </span>
+                    </p>
                     {{ event.content|safe }}
                 </div>
             {% endfor %}
         </div><!-- /.row marketing -->
         <footer class="footer">
-            <p>&copy; {% copyright_note %}</p>
+            <p>&copy; {% copyright_note %} <a href="{% url 'admin:index' %}" class="pull-right">{% trans 'Administration' %}</a></p>
         </footer>
     </div><!-- /.container -->
 {% endblock %}
