@@ -30,11 +30,13 @@
             <p class="lead">
                 {% trans 'Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde (ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich.' %}
             </p>
-            <p>
-                <a class="btn btn-lg btn-primary" href="{{ flatpages.0.get_absolute_url }}">
-                    {% trans 'Weiter gehts hier' %} <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
-                </a>
-            </p>
+            {% if flatpages %}
+                <p>
+                    <a class="btn btn-lg btn-primary" href="{{ flatpages.0.get_absolute_url }}">
+                        {% trans 'Weiter gehts hier' %} <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                    </a>
+                </p>
+            {% endif %}
         </div><!-- /.jumbotron -->
         <div class="row marketing">
             {% for event in event_list %}

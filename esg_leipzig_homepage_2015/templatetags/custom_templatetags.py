@@ -14,7 +14,7 @@ def is_active_string(context, flatpage):
     url of the given flatpage. Else returns an empty string.
     """
     request = context.get('request')
-    if request and re.match(flatpage.slug, request.path[1:]):
+    if request and re.match(flatpage.slug + '/', request.path[1:]):
         result = ' active'
     else:
         result = ''

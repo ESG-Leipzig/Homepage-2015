@@ -1,8 +1,10 @@
 import datetime
 
+from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.formats import localize
+from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_lazy
 
 
@@ -12,9 +14,10 @@ class FlatPage(models.Model):
     """
     slug = models.SlugField(
         ugettext_lazy('Slug/URL'),
+        unique=True,
         help_text=ugettext_lazy(
-            "Beispiel: 'impressum'. Keinen voran- oder nachgestellten "
-            "Schrägstrich setzen."))
+            "Beispiel: 'impressum'. Jede Seite muss einen individuellen "
+            "Eintrag haben."))
     title = models.CharField(
         ugettext_lazy('Titel'),
         max_length=100,
@@ -47,6 +50,16 @@ class FlatPage(models.Model):
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
         help_text=ugettext_lazy('Es können alle HTML-Tags verwendet werden.'))
+    parent = models.ForeignKey(
+        'self',
+        verbose_name=ugettext_lazy('Elternelement'),
+        null=True,
+        blank=True,
+        help_text=ugettext_lazy(
+            'Wenn die Seite eine Unterseite sein soll, ist hier das '
+            'Elternelement einzutragen. Bleibt das Feld leer, residiert die '
+            'Seite auf der obersten Ebene. Unterseiten erscheinen nicht den '
+            'Menüs.'))
     weight = models.IntegerField(
         ugettext_lazy('Platzierung'),
         default=100,
@@ -68,10 +81,36 @@ class FlatPage(models.Model):
         verbose_name_plural = ugettext_lazy('Statische Seiten')
 
     def __str__(self):
-        return self.title
+        if self.parent:
+            string = '%(Titel)s (Unterseite von %(Elternelement)s)' % {
+                'Titel': self.title,
+                'Elternelement': self.parent.title}
+        else:
+            string = self.title
+        return string
 
     def get_absolute_url(self):
-        return reverse('flatpage', args=[self.slug])
+        """
+        Returns the URL to the flatpage. Slugs of child and parent pages are
+        combined.
+        """
+        url = reverse('flatpage', args=[self.slug])
+        if self.parent is not None:
+            url = self.parent.get_absolute_url()[:-1] + url
+        return url
+
+    def clean(self):
+        """
+        Checks parent field to prevent hierarchical loops.
+        """
+        super().clean()
+        ancestor = self.parent
+        while ancestor is not None:
+            if ancestor == self:
+                raise ValidationError(_(
+                    'Fehler: Es darf keine zirkuläre Hierarchie erstellt '
+                    'werden. Wählen Sie ein anderes Elternelement.'))
+            ancestor = ancestor.parent
 
 
 class Event(models.Model):

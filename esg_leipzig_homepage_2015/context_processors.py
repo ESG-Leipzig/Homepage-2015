@@ -3,6 +3,7 @@ from .models import FlatPage
 
 def flatpages(request):
     """
-    Adds a queryset of all flatpages to the template context.
+    Adds a queryset of all root flatpages (without parents) to the template
+    context.
     """
-    return {'flatpages': FlatPage.objects.all()}
+    return {'flatpages': FlatPage.objects.filter(parent_id=None)}

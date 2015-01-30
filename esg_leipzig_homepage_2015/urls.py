@@ -12,7 +12,7 @@ urlpatterns = patterns(
         include(admin.site.urls)),
     url(r'^i18n/',
         include('django.conf.urls.i18n')),
-    url(r'^(?P<slug>\w+)/$',
+    url(r'^(?P<url>[\w/]+)/$',
         views.FlatPageView.as_view(),
         name='flatpage'),
 )
