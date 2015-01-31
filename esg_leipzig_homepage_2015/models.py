@@ -49,7 +49,10 @@ class FlatPage(models.Model):
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        help_text=ugettext_lazy('Es können alle HTML-Tags verwendet werden.'))
+        help_text=ugettext_lazy(
+            'Es können alle HTML-Tags verwendet werden. Vergleiche <a href='
+            '"https://github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel'
+            '-f%C3%BCr-den-Inhalt-einer-statischen-Seite">Beispiel</a>.'))
     parent = models.ForeignKey(
         'self',
         verbose_name=ugettext_lazy('Elternelement'),
@@ -133,7 +136,9 @@ class Event(models.Model):
         ugettext_lazy('Dauer in Minuten'),
         null=True,
         blank=True,
-        help_text=ugettext_lazy("Ein Tag hat 1440 Minuten."))
+        help_text=ugettext_lazy(
+            'Wenn nichts angegeben ist, wird keine Zeit für das Ende der '
+            'Veranstaltung angezeigt.'))
 
     class Meta:
         ordering = ('begin',)

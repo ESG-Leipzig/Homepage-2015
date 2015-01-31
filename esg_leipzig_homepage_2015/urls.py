@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, patterns, url
 from django.contrib import admin
 
 from . import views
@@ -14,5 +14,4 @@ urlpatterns = patterns(
         include('django.conf.urls.i18n')),
     url(r'^(?P<url>[\w/]+)/$',
         views.FlatPageView.as_view(),
-        name='flatpage'),
-)
+        name='flatpage'))

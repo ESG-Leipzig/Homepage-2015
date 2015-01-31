@@ -16,5 +16,5 @@ Run::
 
 Later run::
 
-  $ pip install flake8==2.3.0
+  $ pip install flake8
   $ flake8 --exclude="esg_leipzig_homepage_2015/migrations/" manage.py esg_leipzig_homepage_2015
