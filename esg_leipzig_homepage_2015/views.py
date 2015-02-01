@@ -58,14 +58,17 @@ class FlatPageView(generic.DetailView):
 
     def get_context_data(self, **context):
         """
-        Returns the template context. Adds breadcrumb to it.
+        Returns the template context. Adds breadcrumb to it if neccessary.
         """
         context = super().get_context_data(**context)
         parent = context['flatpage'].parent
-        breadcrumb_list = [context['flatpage']]
-        while parent is not None:
-            breadcrumb_list.append(parent)
-            parent = parent.parent
-        breadcrumb_list.reverse()
+        if parent is None:
+            breadcrumb_list = []
+        else:
+            breadcrumb_list = [context['flatpage']]
+            while parent is not None:
+                breadcrumb_list.append(parent)
+                parent = parent.parent
+            breadcrumb_list.reverse()
         context['breadcrumb_list'] = breadcrumb_list
         return context
