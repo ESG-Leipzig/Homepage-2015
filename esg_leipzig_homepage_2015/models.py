@@ -23,7 +23,8 @@ class FlatPage(models.Model):
         max_length=100,
         help_text=ugettext_lazy(
             "Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs "
-            "angezeigt."))
+            "angezeigt. Änderungen sind immer in den Sprachfeldern "
+            "vorzunehmen."))
     is_in_navbar = models.BooleanField(
         ugettext_lazy('In der oberen Navigationsleiste'),
         blank=True,
@@ -45,14 +46,17 @@ class FlatPage(models.Model):
         blank=True,
         help_text=ugettext_lazy(
             "Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. "
-            "Die Schlagzeile wird unter dem Titelbild angezeigt."))
+            "Die Schlagzeile wird unter dem Titelbild angezeigt. Änderungen "
+            "sind immer in den Sprachfeldern vorzunehmen."))
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
+        default='<div class="row">\n<div class="col-xs-12">\n\n</div>\n</div>',
         help_text=ugettext_lazy(
             'Es können alle HTML-Tags verwendet werden. Vergleiche <a href='
             '"https://github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel'
-            '-f%C3%BCr-den-Inhalt-einer-statischen-Seite">Beispiel</a>.'))
+            '-f%C3%BCr-den-Inhalt-einer-statischen-Seite">Beispiel</a>. '
+            'Änderungen sind immer in den Sprachfeldern vorzunehmen.'))
     parent = models.ForeignKey(
         'self',
         verbose_name=ugettext_lazy('Elternelement'),
@@ -61,8 +65,8 @@ class FlatPage(models.Model):
         help_text=ugettext_lazy(
             'Wenn die Seite eine Unterseite sein soll, ist hier das '
             'Elternelement einzutragen. Bleibt das Feld leer, residiert die '
-            'Seite auf der obersten Ebene. Unterseiten erscheinen nicht den '
-            'Menüs.'))
+            'Seite auf der obersten Ebene. Unterseiten erscheinen nicht in '
+            'den Menüs.'))
     weight = models.IntegerField(
         ugettext_lazy('Platzierung'),
         default=100,
@@ -124,11 +128,15 @@ class Event(models.Model):
         ugettext_lazy('Titel'),
         max_length=255,
         help_text=ugettext_lazy(
-            "Beispiel: 'ESG-Gottesdienst mit Abendmahl'."))
+            "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind "
+            "immer in den Sprachfeldern vorzunehmen."))
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        help_text=ugettext_lazy('Es können alle HTML-Tags verwendet werden.'))
+        default='<p>\n\n</p>',
+        help_text=ugettext_lazy(
+            'Es können alle HTML-Tags verwendet werden. Änderungen sind immer '
+            'in den Sprachfeldern vorzunehmen.'))
     begin = models.DateTimeField(
         ugettext_lazy('Beginn'),
         help_text=ugettext_lazy("Beispiel: '2013-07-20 14:00'."))
