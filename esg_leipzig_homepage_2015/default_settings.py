@@ -99,7 +99,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'bower_components'),
 )
 
-STATIC_ROOT = os.path.dirname(__file__)
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 
 # Miscellaneous entries
