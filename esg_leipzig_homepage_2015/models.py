@@ -88,13 +88,7 @@ class FlatPage(models.Model):
         verbose_name_plural = ugettext_lazy('Statische Seiten')
 
     def __str__(self):
-        if self.parent:
-            string = '%(Titel)s (Unterseite von %(Elternelement)s)' % {
-                'Titel': self.title,
-                'Elternelement': self.parent.title}
-        else:
-            string = self.title
-        return string
+        return self.title
 
     def get_absolute_url(self):
         """
@@ -160,3 +154,21 @@ class Event(models.Model):
     def end(self):
         duration = self.duration or 0
         return self.begin + datetime.timedelta(minutes=duration)
+
+
+class MediaFile(models.Model):
+    """
+    Model for uploaded files like images.
+    """
+    mediafile = models.FileField(
+        ugettext_lazy('Datei'),
+        max_length=255)
+    uploaded_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('-uploaded_on',)
+        verbose_name = ugettext_lazy('Datei')
+        verbose_name_plural = ugettext_lazy('Dateien')
+
+    def __str__(self):
+        return self.mediafile.url
