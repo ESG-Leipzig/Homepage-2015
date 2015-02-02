@@ -8,7 +8,9 @@
 {% endblock %}
 
 {% block jumbotron_inner %}
-    <p><img src="{{ flatpage.header_image_url }}" alt="" width="100%"></p>
+    {% if flatpage.header_image_url %}
+        <p><img src="{{ flatpage.header_image_url }}" alt="" width="100%"></p>
+    {% endif %}
     <p>{{ flatpage.headline }}</p>
 {% endblock %}
 
