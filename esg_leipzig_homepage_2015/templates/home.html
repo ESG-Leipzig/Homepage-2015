@@ -52,7 +52,11 @@
             {% endfor %}
         </div><!-- /.row marketing -->
         <footer class="footer">
-            <p>&copy; {% copyright_note %} <a href="{% url 'admin:index' %}" class="pull-right">{% trans 'Administration' %}</a></p>
+            &copy; {% copyright_note %}
+            <ul class="list-inline pull-right">
+                <li><a href="https://github.com/ESG-Leipzig/Homepage-2015/">{% trans 'Quellcode' %}</a></li>
+                <li><a href="{% url 'admin:index' %}" >{% trans 'Administration' %}</a></li>
+            </ul>
         </footer>
     </div><!-- /.container -->
 {% endblock %}
