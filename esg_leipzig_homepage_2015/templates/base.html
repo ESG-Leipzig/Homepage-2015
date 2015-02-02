@@ -37,7 +37,7 @@
             <a href="#main_content" class="sr-only">{% trans 'Zum Inhalt springen' %}</a>
             <a href="#sidebar" class="sr-only">{% trans 'Zum Menü springen' %}</a>
             {% block navbar %}
-                <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                <nav class="navbar navbar-fixed-top navbar-inverse">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -97,7 +97,7 @@
                             </div>
                         {% endblock %}
                         {% if breadcrumb_list %}
-                            <ol class="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
                                 {% for flatpage in breadcrumb_list %}
                                     {% if not forloop.last %}
                                         <li><a href="{{ flatpage.get_absolute_url }}">{{ flatpage.title }}</a></li>
