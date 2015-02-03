@@ -1,4 +1,5 @@
 import datetime
+import json
 
 from django.conf import settings
 from django.http import Http404
@@ -17,12 +18,38 @@ class HomeView(generic.ListView):
 
     def get_queryset(self):
         """
-        Returns a queryset of all future events. Uses
-        settings.EVENT_DELAY_IN_MINUTES to determine the range.
+        Returns a queryset of all future events that should appear on home.
+        Uses settings.EVENT_DELAY_IN_MINUTES to determine the range.
         """
         hiding_time = timezone.now() - datetime.timedelta(
             minutes=settings.EVENT_DELAY_IN_MINUTES)
-        return super().get_queryset().filter(begin__gte=hiding_time)
+        return super().get_queryset().filter(
+            on_home=True, begin__gte=hiding_time)
+
+
+class CalendarView(generic.ListView):
+    """
+    View for a calendar with all events.
+    """
+    model = Event
+    template_name = 'calendar.html'
+
+    def get_context_data(self, **context):
+        """
+        Returns the template context. Adds event data as JSON for use in
+        Javascript calendar.
+        """
+        context = super().get_context_data(**context)
+        event_list = []
+        for event in context['event_list']:
+            event_dict = {
+                'title': event.title,
+                'start': event.begin.isoformat()}
+            if event.duration:
+                event_dict['end'] = event.end.isoformat()
+            event_list.append(event_dict)
+        context['event_list_json'] = json.dumps(event_list)
+        return context
 
 
 class FlatPageView(generic.DetailView):

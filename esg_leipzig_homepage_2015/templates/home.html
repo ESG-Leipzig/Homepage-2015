@@ -16,9 +16,14 @@
         <div class="header">
             <nav role="navigation">
                 <ul class="nav nav-pills pull-right">
+                    <li role="presentation">
+                        <a href="{% url 'calendar' %}">{% trans 'Termine' %}</a>
+                    </li>
                     {% for flatpage in flatpages %}
                         {% if flatpage.is_in_navbar %}
-                            <li role="presentation"><a href="{{ flatpage.get_absolute_url }}">{{ flatpage.title }}</a></li>
+                            <li role="presentation">
+                                <a href="{{ flatpage.get_absolute_url }}">{{ flatpage.title }}</a>
+                            </li>
                         {% endif %}
                     {% endfor %}
                 </ul>
@@ -38,19 +43,23 @@
                 </p>
             {% endif %}
         </div><!-- /.jumbotron -->
-        <div class="row marketing">
-            {% for event in event_list %}
-                <div class="col-lg-6">
-                    <h3>{{ event.title }}</h3>
-                    <p>
-                        <span class="label label-primary">
-                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
-                        </span>
-                    </p>
-                    {{ event.content|safe }}
-                </div>
-            {% endfor %}
-        </div><!-- /.row marketing -->
+        {% for event in event_list %}
+            {% if not forloop.counter|divisibleby:2 %}
+                <div class="row marketing">
+            {% endif %}
+            <div class="col-lg-6">
+                <h3>{{ event.title }}</h3>
+                <p>
+                    <span class="label label-primary">
+                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
+                    </span>
+                </p>
+                {{ event.content|safe }}
+            </div>
+            {% if forloop.counter|divisibleby:2 or forloop.last %}
+                </div><!-- /.row marketing -->
+            {% endif %}
+        {% endfor %}
         <footer class="footer">
             &copy; {% copyright_note %}
             <ul class="list-inline pull-right">
