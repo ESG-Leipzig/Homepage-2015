@@ -9,9 +9,16 @@ class EventAdmin(admin.ModelAdmin):
     date_hierarchy = 'begin'
     list_display = ('title', 'begin',)
 
+    def get_changeform_initial_data(self, request):
+        return {'content': '<p>\n\n</p>'}
+
 
 class FlatPageAdmin(admin.ModelAdmin):
     list_display = ('title', 'parent', 'weight',)
+
+    def get_changeform_initial_data(self, request):
+        return {'content': '<div class="row">\n<div class="col-xs-12">'
+                           '\n\n</div>\n</div>'}
 
 
 class MediaFileAdmin(admin.ModelAdmin):

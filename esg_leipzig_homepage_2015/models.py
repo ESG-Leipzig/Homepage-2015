@@ -51,7 +51,6 @@ class FlatPage(models.Model):
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        default='<div class="row">\n<div class="col-xs-12">\n\n</div>\n</div>',
         help_text=ugettext_lazy(
             'Es können alle HTML-Tags verwendet werden. Vergleiche <a href='
             '"https://github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel'
@@ -132,7 +131,6 @@ class Event(models.Model):
     content = models.TextField(
         ugettext_lazy('Inhalt (HTML)'),
         blank=True,
-        default='<p>\n\n</p>',
         help_text=ugettext_lazy(
             'Es können alle HTML-Tags verwendet werden. Änderungen sind immer '
             'in den Sprachfeldern vorzunehmen.'))
