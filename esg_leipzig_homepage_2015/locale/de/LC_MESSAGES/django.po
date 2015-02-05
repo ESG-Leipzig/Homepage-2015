@@ -1,0 +1,255 @@
+# Language file for ESG Leipzig Homepage 2015
+# Copyright (C) 2015 ESG Leipzig
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-06 00:48+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin.py:29 admin.py:30
+msgid "ESG Leipzig Administration"
+msgstr ""
+
+#: apps.py:8
+msgid "Homepage der ESG Leipzig ab 2015"
+msgstr ""
+
+#: default_settings.py:79
+msgid "Deutsch"
+msgstr ""
+
+#: default_settings.py:80
+msgid "Englisch"
+msgstr ""
+
+#: default_settings.py:81
+msgid "Französisch"
+msgstr ""
+
+#: models.py:16
+msgid "Slug/URL"
+msgstr ""
+
+#: models.py:19
+msgid ""
+"Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
+msgstr ""
+
+#: models.py:22 models.py:126
+msgid "Titel"
+msgstr ""
+
+#: models.py:25
+msgid ""
+"Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs angezeigt. "
+"Änderungen sind immer in den Sprachfeldern vorzunehmen."
+msgstr ""
+
+#: models.py:29
+msgid "In der oberen Navigationsleiste"
+msgstr ""
+
+#: models.py:33
+msgid "Im rechten Hauptmenü"
+msgstr ""
+
+#: models.py:37
+msgid "URL zum Titelbild"
+msgstr ""
+
+#: models.py:41
+msgid ""
+"Beispiel: '/static/custom/myimage.jpg'. Die Bilddatei muss manuell auf den "
+"Server geladen werden."
+msgstr ""
+
+#: models.py:44
+msgid "Schlagzeile"
+msgstr ""
+
+#: models.py:48
+msgid ""
+"Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. Die "
+"Schlagzeile wird unter dem Titelbild angezeigt. Änderungen sind immer in den "
+"Sprachfeldern vorzunehmen."
+msgstr ""
+
+#: models.py:52 models.py:132
+msgid "Inhalt (HTML)"
+msgstr ""
+
+#: models.py:55
+msgid ""
+"Es können alle HTML-Tags verwendet werden. Vergleiche <a href=\"https://"
+"github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-den-Inhalt-einer-"
+"statischen-Seite\">Beispiel</a>. Änderungen sind immer in den Sprachfeldern "
+"vorzunehmen."
+msgstr ""
+
+#: models.py:61
+msgid "Elternelement"
+msgstr ""
+
+#: models.py:65
+msgid ""
+"Wenn die Seite eine Unterseite sein soll, ist hier das Elternelement "
+"einzutragen. Bleibt das Feld leer, residiert die Seite auf der obersten "
+"Ebene. Unterseiten erscheinen nicht in den Menüs."
+msgstr ""
+
+#: models.py:70
+msgid "Platzierung"
+msgstr ""
+
+#: models.py:73
+msgid "Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter unten steht."
+msgstr ""
+
+#: models.py:76
+msgid "Vorlage"
+msgstr ""
+
+#: models.py:80
+msgid ""
+"Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches angegeben ist, "
+"wird die Vorlage 'flatpage_default.html' verwendet."
+msgstr ""
+
+#: models.py:86
+msgid "Statische Seite"
+msgstr ""
+
+#: models.py:87
+msgid "Statische Seiten"
+msgstr ""
+
+#: models.py:111
+msgid ""
+"Fehler: Es darf keine zirkuläre Hierarchie erstellt werden. Wählen Sie ein "
+"anderes Elternelement."
+msgstr ""
+
+#: models.py:121
+msgid "Aut der Startseite"
+msgstr ""
+
+#: models.py:124
+msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
+msgstr ""
+
+#: models.py:129
+msgid ""
+"Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
+"Sprachfeldern vorzunehmen."
+msgstr ""
+
+#: models.py:135
+msgid ""
+"Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
+"Sprachfeldern vorzunehmen."
+msgstr ""
+
+#: models.py:138
+msgid "Beginn"
+msgstr ""
+
+#: models.py:139
+msgid "Beispiel: '2013-07-20 14:00'."
+msgstr ""
+
+#: models.py:141
+msgid "Dauer in Minuten"
+msgstr ""
+
+#: models.py:145
+msgid ""
+"Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
+"angezeigt."
+msgstr ""
+
+#: models.py:150
+msgid "Veranstaltung"
+msgstr ""
+
+#: models.py:151
+msgid "Veranstaltungen"
+msgstr ""
+
+#: models.py:167 models.py:173
+msgid "Datei"
+msgstr ""
+
+#: models.py:174
+msgid "Dateien"
+msgstr ""
+
+#: templates/base.html:11 templates/base.html.py:22 templates/base.html:95
+#: templatetags/custom_templatetags.py:31
+msgid "Evangelische Studierendengemeinde Leipzig"
+msgstr ""
+
+#: templates/base.html:12
+msgid ""
+"Die Evangelische Studierendengemeinde Leipzig will eine für den christlichen "
+"Glauben einladende Gemeinde sein. Sie ist Teil der Evangelisch-Lutherischen "
+"Landeskirche Sachsens und wendet sich an Studierende aller Hochschulen und "
+"Fachrichtungen. Das ökumenische Zusammensein mit anderen christlichen "
+"Studierendengruppen, insbesondere mit der Katholischen Studentengemeinde "
+"(KSG), ist für sie selbstverständlich."
+msgstr ""
+
+#: templates/base.html:37 templates/home.html:14
+msgid "Zum Inhalt springen"
+msgstr ""
+
+#: templates/base.html:38
+msgid "Zum Menü springen"
+msgstr ""
+
+#: templates/base.html:44 templates/base.html.py:89
+msgid "Menü an/aus"
+msgstr ""
+
+#: templates/base.html:54 templates/calendar.html:7 templates/home.html:20
+msgid "Termine"
+msgstr ""
+
+#: templates/base.html:69
+msgid "Sprachen"
+msgstr ""
+
+#: templates/base.html:130 templates/home.html:66
+msgid "Quellcode"
+msgstr ""
+
+#: templates/base.html:131 templates/home.html:67
+msgid "Administration"
+msgstr ""
+
+#: templates/calendar.html:36
+msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Überblick."
+msgstr ""
+
+#: templates/home.html:36
+msgid ""
+"Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde "
+"(ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich."
+msgstr ""
+
+#: templates/home.html:41
+msgid "Weiter gehts hier"
+msgstr ""
+
+#: urls.py:12
+msgid "^kalender/$"
+msgstr ""
