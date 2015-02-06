@@ -1,250 +1,257 @@
 # Language file for ESG Leipzig Homepage 2015
 # Copyright (C) 2015 ESG Leipzig
 # This file is distributed under the same license as the package.
-#
+# 
+# Translators:
+# Norman Jäckel <transifex16062013@normanjaeckel.de>, 2015
 msgid ""
 msgstr ""
+"Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-06 01:22+0100\n"
-"Language: de\n"
+"PO-Revision-Date: 2015-02-06 00:23+0000\n"
+"Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
+"Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: admin.py:29 admin.py:30
 msgid "ESG Leipzig Administration"
-msgstr ""
+msgstr "ESG Leipzig Administration"
 
 #: apps.py:8
 msgid "Homepage der ESG Leipzig ab 2015"
-msgstr ""
+msgstr "Website of ESG Leipzig since 2015"
 
 #: default_settings.py:79
 msgid "Deutsch"
-msgstr ""
+msgstr "German"
 
 #: default_settings.py:80
 msgid "Englisch"
-msgstr ""
+msgstr "English"
 
 #: default_settings.py:81
 msgid "Französisch"
-msgstr ""
+msgstr "French"
 
 #: models.py:16
 msgid "Slug/URL"
-msgstr ""
+msgstr "Slug/URL"
 
 #: models.py:19
 msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
-msgstr ""
+msgstr "Example: 'legal-notice'. Each page must have an unique entry."
 
 #: models.py:22 models.py:126
 msgid "Titel"
-msgstr ""
+msgstr "Title"
 
 #: models.py:25
 msgid ""
 "Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs angezeigt. "
 "Änderungen sind immer in den Sprachfeldern vorzunehmen."
-msgstr ""
+msgstr "Example: 'Legal notice'. The title is used as link in the menus. Changes have always to be done in the language fields."
 
 #: models.py:29
 msgid "In der oberen Navigationsleiste"
-msgstr ""
+msgstr "In the upper navigation bar"
 
 #: models.py:33
 msgid "Im rechten Hauptmenü"
-msgstr ""
+msgstr "In the right main menu"
 
 #: models.py:37
 msgid "URL zum Titelbild"
-msgstr ""
+msgstr "URL of header image"
 
 #: models.py:41
 msgid ""
 "Beispiel: '/static/custom/myimage.jpg'. Die Bilddatei muss manuell auf den "
 "Server geladen werden."
-msgstr ""
+msgstr "Example: '/static/custom/myimage.jpg'. The image file must be manually uploaded on the server."
 
 #: models.py:44
 msgid "Schlagzeile"
-msgstr ""
+msgstr "Headline"
 
 #: models.py:48
 msgid ""
 "Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. Die "
-"Schlagzeile wird unter dem Titelbild angezeigt. Änderungen sind immer in den "
-"Sprachfeldern vorzunehmen."
-msgstr ""
+"Schlagzeile wird unter dem Titelbild angezeigt. Änderungen sind immer in den"
+" Sprachfeldern vorzunehmen."
+msgstr "Example: 'We gather for service and worship.'. The headline is shown below the header image. Changes have always to be done in the language fields."
 
 #: models.py:52 models.py:132
 msgid "Inhalt (HTML)"
-msgstr ""
+msgstr "Content (HTML)"
 
 #: models.py:55
 msgid ""
-"Es können alle HTML-Tags verwendet werden. Vergleiche <a href=\"https://"
-"github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-den-Inhalt-einer-"
-"statischen-Seite\">Beispiel</a>. Änderungen sind immer in den Sprachfeldern "
-"vorzunehmen."
-msgstr ""
+"Es können alle HTML-Tags verwendet werden. Vergleiche <a "
+"href=\"https://github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-"
+"den-Inhalt-einer-statischen-Seite\">Beispiel</a>. Änderungen sind immer in "
+"den Sprachfeldern vorzunehmen."
+msgstr "All HTML tags can be used. See <a href=\"https://github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-den-Inhalt-einer-statischen-Seite\">example</a>. Changes have always to be done in the language fields."
 
 #: models.py:61
 msgid "Elternelement"
-msgstr ""
+msgstr "Parent element"
 
 #: models.py:65
 msgid ""
 "Wenn die Seite eine Unterseite sein soll, ist hier das Elternelement "
 "einzutragen. Bleibt das Feld leer, residiert die Seite auf der obersten "
 "Ebene. Unterseiten erscheinen nicht in den Menüs."
-msgstr ""
+msgstr "If the page should be a subpage, the parent element must be set. If this field remains empty, the page lives on top level. Subpages do not appear in the menus."
 
 #: models.py:70
 msgid "Platzierung"
-msgstr ""
+msgstr "Weight"
 
 #: models.py:73
-msgid "Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter unten steht."
-msgstr ""
+msgid ""
+"Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter unten steht."
+msgstr "A higher number means that the entry in the menu appears further down."
 
 #: models.py:76
 msgid "Vorlage"
-msgstr ""
+msgstr "Template"
 
 #: models.py:80
 msgid ""
-"Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches angegeben ist, "
-"wird die Vorlage 'flatpage_default.html' verwendet."
-msgstr ""
+"Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches angegeben ist,"
+" wird die Vorlage 'flatpage_default.html' verwendet."
+msgstr "Example: 'my_site.html'. If nothing or something invalid is set, the template 'flatpage_default.html' is used."
 
 #: models.py:86
 msgid "Statische Seite"
-msgstr ""
+msgstr "Static page"
 
 #: models.py:87
 msgid "Statische Seiten"
-msgstr ""
+msgstr "Static pages"
 
 #: models.py:111
 msgid ""
 "Fehler: Es darf keine zirkuläre Hierarchie erstellt werden. Wählen Sie ein "
 "anderes Elternelement."
-msgstr ""
+msgstr "Error: There must not be a circular hierarchy. Choose another parent element."
 
 #: models.py:121
 msgid "Auf der Startseite"
-msgstr ""
+msgstr "On homepage"
 
 #: models.py:124
 msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
-msgstr ""
+msgstr "If disabled, the event appears only in the calendar."
 
 #: models.py:129
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
-msgstr ""
+msgstr "Example: 'Service with sacrament'. Changes have always to be done in the language fields."
 
 #: models.py:135
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
-msgstr ""
+msgstr "All HTML tags can be used. Changes have always to be done in the language fields."
 
 #: models.py:138
 msgid "Beginn"
-msgstr ""
+msgstr "Begin"
 
 #: models.py:139
 msgid "Beispiel: '2013-07-20 14:00'."
-msgstr ""
+msgstr "Example: '2013-07-20 14:00'."
 
 #: models.py:141
 msgid "Dauer in Minuten"
-msgstr ""
+msgstr "Duration in minutes"
 
 #: models.py:145
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
-msgstr ""
+msgstr "If empty, an end time is not shown."
 
 #: models.py:150
 msgid "Veranstaltung"
-msgstr ""
+msgstr "Event"
 
 #: models.py:151
 msgid "Veranstaltungen"
-msgstr ""
+msgstr "Events"
 
 #: models.py:167 models.py:173
 msgid "Datei"
-msgstr ""
+msgstr "File"
 
 #: models.py:174
 msgid "Dateien"
-msgstr ""
+msgstr "Files"
 
 #: templates/base.html:11 templates/base.html.py:22 templates/base.html:95
 #: templatetags/custom_templatetags.py:31
 msgid "Evangelische Studierendengemeinde Leipzig"
-msgstr ""
+msgstr "Protestant Student Parish"
 
 #: templates/base.html:12
 msgid ""
-"Die Evangelische Studierendengemeinde Leipzig will eine für den christlichen "
-"Glauben einladende Gemeinde sein. Sie ist Teil der Evangelisch-Lutherischen "
-"Landeskirche Sachsens und wendet sich an Studierende aller Hochschulen und "
+"Die Evangelische Studierendengemeinde Leipzig will eine für den christlichen"
+" Glauben einladende Gemeinde sein. Sie ist Teil der Evangelisch-Lutherischen"
+" Landeskirche Sachsens und wendet sich an Studierende aller Hochschulen und "
 "Fachrichtungen. Das ökumenische Zusammensein mit anderen christlichen "
 "Studierendengruppen, insbesondere mit der Katholischen Studentengemeinde "
 "(KSG), ist für sie selbstverständlich."
-msgstr ""
+msgstr "The Protestant Student Parish wants to be a welcoming parish ... TRANSLATION NOT READY YET ()."
 
 #: templates/base.html:37 templates/home.html:14
 msgid "Zum Inhalt springen"
-msgstr ""
+msgstr "Go to content"
 
 #: templates/base.html:38
 msgid "Zum Menü springen"
-msgstr ""
+msgstr "Go to menu"
 
 #: templates/base.html:44 templates/base.html.py:89
 msgid "Menü an/aus"
-msgstr ""
+msgstr "Toggle menu"
 
 #: templates/base.html:54 templates/calendar.html:7 templates/home.html:20
 msgid "Termine"
-msgstr ""
+msgstr "Events"
 
 #: templates/base.html:69
 msgid "Sprachen"
-msgstr ""
+msgstr "Languages"
 
 #: templates/base.html:130 templates/home.html:66
 msgid "Quellcode"
-msgstr ""
+msgstr "Source code"
 
 #: templates/base.html:131 templates/home.html:67
 msgid "Administration"
-msgstr ""
+msgstr "Administration"
 
 #: templates/calendar.html:36
 msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Überblick."
-msgstr ""
+msgstr "Here you find an overview of all events of the parish."
 
 #: templates/home.html:36
 msgid ""
 "Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde "
 "(ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich."
-msgstr ""
+msgstr "Welcome on the website of the Protestant Student Parish (ESG) Leipzig. Have a look and come in."
 
 #: templates/home.html:41
 msgid "Weiter gehts hier"
-msgstr ""
+msgstr "Follow up"
 
 #: urls.py:12
 msgid "^kalender/$"
-msgstr ""
+msgstr "^calendar/$"

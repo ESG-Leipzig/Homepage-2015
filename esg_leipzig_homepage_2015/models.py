@@ -118,7 +118,7 @@ class Event(models.Model):
     Model for events that appear in the calendar.
     """
     on_home = models.BooleanField(
-        ugettext_lazy('Aut der Startseite'),
+        ugettext_lazy('Auf der Startseite'),
         default=True,
         help_text=ugettext_lazy(
             'Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender.'))
