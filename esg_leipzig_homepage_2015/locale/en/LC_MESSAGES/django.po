@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-06 01:22+0100\n"
-"PO-Revision-Date: 2015-02-06 00:23+0000\n"
+"PO-Revision-Date: 2015-02-06 00:29+0000\n"
 "Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -198,7 +198,7 @@ msgstr "Files"
 #: templates/base.html:11 templates/base.html.py:22 templates/base.html:95
 #: templatetags/custom_templatetags.py:31
 msgid "Evangelische Studierendengemeinde Leipzig"
-msgstr "Protestant Student Parish"
+msgstr "Protestant Student Parish Leipzig"
 
 #: templates/base.html:12
 msgid ""
@@ -208,7 +208,7 @@ msgid ""
 "Fachrichtungen. Das ökumenische Zusammensein mit anderen christlichen "
 "Studierendengruppen, insbesondere mit der Katholischen Studentengemeinde "
 "(KSG), ist für sie selbstverständlich."
-msgstr "The Protestant Student Parish wants to be a welcoming parish ... TRANSLATION NOT READY YET ()."
+msgstr "The Protestant Student Parish Leipzig wants to be a welcoming parish ... TRANSLATION NOT READY YET ()."
 
 #: templates/base.html:37 templates/home.html:14
 msgid "Zum Inhalt springen"
@@ -246,7 +246,7 @@ msgstr "Here you find an overview of all events of the parish."
 msgid ""
 "Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde "
 "(ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich."
-msgstr "Welcome on the website of the Protestant Student Parish (ESG) Leipzig. Have a look and come in."
+msgstr "Welcome on the website of the Protestant Student Parish Leipzig (ESG Leipzig). Have a look and come in."
 
 #: templates/home.html:41
 msgid "Weiter gehts hier"

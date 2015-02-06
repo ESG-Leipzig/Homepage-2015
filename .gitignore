@@ -3,6 +3,9 @@
 # Python compiled files
 __pycache__/
 
+# GNU gettext compiled language files
+*.mo
+
 # Virtual Python Environment builder
 .virtualenv/
 
