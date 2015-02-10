@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-06 01:22+0100\n"
+"POT-Creation-Date: 2015-02-10 19:02+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -198,9 +198,7 @@ msgid ""
 "Die Evangelische Studierendengemeinde Leipzig will eine für den christlichen "
 "Glauben einladende Gemeinde sein. Sie ist Teil der Evangelisch-Lutherischen "
 "Landeskirche Sachsens und wendet sich an Studierende aller Hochschulen und "
-"Fachrichtungen. Das ökumenische Zusammensein mit anderen christlichen "
-"Studierendengruppen, insbesondere mit der Katholischen Studentengemeinde "
-"(KSG), ist für sie selbstverständlich."
+"Fachrichtungen."
 msgstr ""
 
 #: templates/base.html:37 templates/home.html:14
@@ -232,7 +230,7 @@ msgid "Administration"
 msgstr ""
 
 #: templates/calendar.html:36
-msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Überblick."
+msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Kalender."
 msgstr ""
 
 #: templates/home.html:36
@@ -243,8 +241,4 @@ msgstr ""
 
 #: templates/home.html:41
 msgid "Weiter gehts hier"
-msgstr ""
-
-#: urls.py:12
-msgid "^kalender/$"
 msgstr ""
