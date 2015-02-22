@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-22 21:53+0100\n"
+"POT-Creation-Date: 2015-02-22 21:58+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,10 +25,6 @@ msgstr ""
 
 #: default_settings.py:80
 msgid "Englisch"
-msgstr ""
-
-#: default_settings.py:81
-msgid "Französisch"
 msgstr ""
 
 #: models.py:16

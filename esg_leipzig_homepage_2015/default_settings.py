@@ -78,7 +78,6 @@ LANGUAGE_CODE = 'de'
 LANGUAGES = (
     ('de', ugettext_lazy('Deutsch')),
     ('en', ugettext_lazy('Englisch')),
-    ('fr', ugettext_lazy('Französisch')),
 )
 
 TIME_ZONE = 'Europe/Berlin'
