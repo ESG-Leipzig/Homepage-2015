@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 19:02+0100\n"
-"PO-Revision-Date: 2015-02-10 18:08+0000\n"
+"POT-Creation-Date: 2015-02-22 21:58+0100\n"
+"PO-Revision-Date: 2015-02-22 21:00+0000\n"
 "Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +32,6 @@ msgstr "German"
 #: default_settings.py:80
 msgid "Englisch"
 msgstr "English"
-
-#: default_settings.py:81
-msgid "Französisch"
-msgstr "French"
 
 #: models.py:16
 msgid "Slug/URL"
@@ -195,7 +191,7 @@ msgstr "File"
 msgid "Dateien"
 msgstr "Files"
 
-#: templates/base.html:11 templates/base.html.py:22 templates/base.html:95
+#: templates/base.html:11 templates/base.html.py:22 templates/base.html:96
 #: templatetags/custom_templatetags.py:31
 msgid "Evangelische Studierendengemeinde Leipzig"
 msgstr "Protestant Student’s Parish Leipzig"
@@ -216,7 +212,7 @@ msgstr "Go to content"
 msgid "Zum Menü springen"
 msgstr "Go to menu"
 
-#: templates/base.html:44 templates/base.html.py:89
+#: templates/base.html:44 templates/base.html.py:90
 msgid "Menü an/aus"
 msgstr "Toggle menu"
 
@@ -228,11 +224,15 @@ msgstr "Events"
 msgid "Sprachen"
 msgstr "Languages"
 
-#: templates/base.html:130 templates/home.html:66
+#: templates/base.html:79
+msgid "Sprache ändern"
+msgstr "Change language"
+
+#: templates/base.html:131 templates/home.html:71
 msgid "Quellcode"
 msgstr "Source code"
 
-#: templates/base.html:131 templates/home.html:67
+#: templates/base.html:132 templates/home.html:72
 msgid "Administration"
 msgstr "Administration"
 
@@ -249,3 +249,11 @@ msgstr "Welcome on the website of the Protestant Student’s Parish Leipzig (ESG
 #: templates/home.html:41
 msgid "Weiter gehts hier"
 msgstr "Follow up"
+
+#: templates/home.html:47
+msgid "Die nächsten Veranstaltungen"
+msgstr "The next events"
+
+#: templates/home.html:57
+msgid "Datum und Uhrzeit"
+msgstr "Date and time"
