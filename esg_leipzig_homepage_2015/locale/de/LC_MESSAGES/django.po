@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 19:02+0100\n"
+"POT-Creation-Date: 2015-02-22 21:53+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -188,7 +188,7 @@ msgstr ""
 msgid "Dateien"
 msgstr ""
 
-#: templates/base.html:11 templates/base.html.py:22 templates/base.html:95
+#: templates/base.html:11 templates/base.html.py:22 templates/base.html:96
 #: templatetags/custom_templatetags.py:31
 msgid "Evangelische Studierendengemeinde Leipzig"
 msgstr ""
@@ -209,7 +209,7 @@ msgstr ""
 msgid "Zum Menü springen"
 msgstr ""
 
-#: templates/base.html:44 templates/base.html.py:89
+#: templates/base.html:44 templates/base.html.py:90
 msgid "Menü an/aus"
 msgstr ""
 
@@ -221,11 +221,15 @@ msgstr ""
 msgid "Sprachen"
 msgstr ""
 
-#: templates/base.html:130 templates/home.html:66
+#: templates/base.html:79
+msgid "Sprache ändern"
+msgstr ""
+
+#: templates/base.html:131 templates/home.html:71
 msgid "Quellcode"
 msgstr ""
 
-#: templates/base.html:131 templates/home.html:67
+#: templates/base.html:132 templates/home.html:72
 msgid "Administration"
 msgstr ""
 
@@ -241,4 +245,12 @@ msgstr ""
 
 #: templates/home.html:41
 msgid "Weiter gehts hier"
+msgstr ""
+
+#: templates/home.html:47
+msgid "Die nächsten Veranstaltungen"
+msgstr ""
+
+#: templates/home.html:57
+msgid "Datum und Uhrzeit"
 msgstr ""

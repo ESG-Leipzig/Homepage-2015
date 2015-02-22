@@ -43,23 +43,28 @@
                 </p>
             {% endif %}
         </div><!-- /.jumbotron -->
-        {% for event in event_list %}
-            {% if not forloop.counter|divisibleby:2 %}
-                <div class="row marketing">
-            {% endif %}
-            <div class="col-lg-6">
-                <h3>{{ event.title }}</h3>
-                <p>
-                    <span class="label label-primary">
-                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
-                    </span>
-                </p>
-                {{ event.content|safe }}
-            </div>
-            {% if forloop.counter|divisibleby:2 or forloop.last %}
-                </div><!-- /.row marketing -->
-            {% endif %}
-        {% endfor %}
+        <div id="content">
+            <h2 class="sr-only">{% trans 'Die nächsten Veranstaltungen' %}</h2>
+                {% for event in event_list %}
+                    {% if not forloop.counter|divisibleby:2 %}
+                        <div class="row marketing">
+                    {% endif %}
+                    <div class="col-lg-6">
+                        <h3>{{ event.title }}</h3>
+                        <p>
+                            <span class="label label-primary">
+                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                <span class="sr-only">{% trans 'Datum und Uhrzeit' %}:</span>
+                                {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
+                            </span>
+                        </p>
+                        {{ event.content|safe }}
+                    </div>
+                    {% if forloop.counter|divisibleby:2 or forloop.last %}
+                        </div><!-- /.row marketing -->
+                    {% endif %}
+                {% endfor %}
+        </div><!-- /#content -->
         <footer class="footer">
             &copy; {% copyright_note %}
             <ul class="list-inline pull-right">
