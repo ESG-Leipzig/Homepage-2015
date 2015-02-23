@@ -1,7 +1,12 @@
 from django.conf.urls import include, patterns, url
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 
-from . import views
+from . import sitemaps, views
+
+sitemaps_dict = {
+    'home': sitemaps.HomeSitemap,
+    'flatpages': sitemaps.FlatPageSitemap}
 
 urlpatterns = patterns(
     '',
@@ -15,6 +20,10 @@ urlpatterns = patterns(
         include(admin.site.urls)),
     url(r'^i18n/',
         include('django.conf.urls.i18n')),
+    url(r'^sitemap\.xml$',
+        sitemap,
+        {'sitemaps': sitemaps_dict},
+        name='django.contrib.sitemaps.views.sitemap'),
     url(r'^(?P<url>[-\w/]+)/$',
         views.FlatPageView.as_view(),
         name='flatpage'))

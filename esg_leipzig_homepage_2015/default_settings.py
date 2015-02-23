@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'esg_leipzig_homepage_2015',
 )
 
@@ -58,6 +60,7 @@ ROOT_URLCONF = 'esg_leipzig_homepage_2015.urls'
 
 WSGI_APPLICATION = ''
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases

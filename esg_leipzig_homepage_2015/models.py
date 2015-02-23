@@ -2,6 +2,7 @@ import datetime
 
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.formats import localize
 from django.utils.translation import ugettext as _
@@ -80,6 +81,17 @@ class FlatPage(models.Model):
             "Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches "
             "angegeben ist, wird die Vorlage 'flatpage_default.html' "
             "verwendet."))
+    sitemap_priority = models.DecimalField(
+        ugettext_lazy('Priorität in der Sitemap'),
+        max_digits=2,
+        decimal_places=1,
+        default=0.5,
+        validators=[MinValueValidator(0.0), MaxValueValidator(1.0)],
+        help_text=ugettext_lazy(
+            'Die Zahl gibt die Priorität in der Sitemap an. Sie wird von '
+            'Suchmaschinen ausgewertet. Siehe '
+            '<a href="http://www.sitemaps.org/de/protocol.html#prioritydef">'
+            'Definition im Sitemapprotokoll</a>.'))
 
     class Meta:
         ordering = ('weight', 'slug',)
