@@ -62,6 +62,7 @@ WSGI_APPLICATION = ''
 
 SITE_ID = 1
 
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
