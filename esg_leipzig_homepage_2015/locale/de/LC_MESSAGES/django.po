@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-22 21:58+0100\n"
+"POT-Creation-Date: 2015-02-23 23:26+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,67 +19,67 @@ msgstr ""
 msgid "Homepage der ESG Leipzig ab 2015"
 msgstr ""
 
-#: default_settings.py:79
+#: default_settings.py:82
 msgid "Deutsch"
 msgstr ""
 
-#: default_settings.py:80
+#: default_settings.py:83
 msgid "Englisch"
 msgstr ""
 
-#: models.py:16
+#: models.py:17
 msgid "Slug/URL"
 msgstr ""
 
-#: models.py:19
+#: models.py:20
 msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr ""
 
-#: models.py:22 models.py:126
+#: models.py:23 models.py:138
 msgid "Titel"
 msgstr ""
 
-#: models.py:25
+#: models.py:26
 msgid ""
 "Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs angezeigt. "
 "Änderungen sind immer in den Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:29
+#: models.py:30
 msgid "In der oberen Navigationsleiste"
 msgstr ""
 
-#: models.py:33
+#: models.py:34
 msgid "Im rechten Hauptmenü"
 msgstr ""
 
-#: models.py:37
+#: models.py:38
 msgid "URL zum Titelbild"
 msgstr ""
 
-#: models.py:41
+#: models.py:42
 msgid ""
 "Beispiel: '/static/custom/myimage.jpg'. Die Bilddatei muss manuell auf den "
 "Server geladen werden."
 msgstr ""
 
-#: models.py:44
+#: models.py:45
 msgid "Schlagzeile"
 msgstr ""
 
-#: models.py:48
+#: models.py:49
 msgid ""
 "Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. Die "
 "Schlagzeile wird unter dem Titelbild angezeigt. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:52 models.py:132
+#: models.py:53 models.py:144
 msgid "Inhalt (HTML)"
 msgstr ""
 
-#: models.py:55
+#: models.py:56
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Vergleiche <a href=\"https://"
 "github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-den-Inhalt-einer-"
@@ -87,100 +87,111 @@ msgid ""
 "vorzunehmen."
 msgstr ""
 
-#: models.py:61
+#: models.py:62
 msgid "Elternelement"
 msgstr ""
 
-#: models.py:65
+#: models.py:66
 msgid ""
 "Wenn die Seite eine Unterseite sein soll, ist hier das Elternelement "
 "einzutragen. Bleibt das Feld leer, residiert die Seite auf der obersten "
 "Ebene. Unterseiten erscheinen nicht in den Menüs."
 msgstr ""
 
-#: models.py:70
+#: models.py:71
 msgid "Platzierung"
 msgstr ""
 
-#: models.py:73
+#: models.py:74
 msgid "Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter unten steht."
 msgstr ""
 
-#: models.py:76
+#: models.py:77
 msgid "Vorlage"
 msgstr ""
 
-#: models.py:80
+#: models.py:81
 msgid ""
 "Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches angegeben ist, "
 "wird die Vorlage 'flatpage_default.html' verwendet."
 msgstr ""
 
-#: models.py:86
+#: models.py:85
+msgid "Priorität in der Sitemap"
+msgstr ""
+
+#: models.py:91
+msgid ""
+"Die Zahl gibt die Priorität in der Sitemap an. Sie wird von Suchmaschinen "
+"ausgewertet. Siehe <a href=\"http://www.sitemaps.org/de/protocol."
+"html#prioritydef\">Definition im Sitemapprotokoll</a>."
+msgstr ""
+
+#: models.py:98
 msgid "Statische Seite"
 msgstr ""
 
-#: models.py:87
+#: models.py:99
 msgid "Statische Seiten"
 msgstr ""
 
-#: models.py:111
+#: models.py:123
 msgid ""
 "Fehler: Es darf keine zirkuläre Hierarchie erstellt werden. Wählen Sie ein "
 "anderes Elternelement."
 msgstr ""
 
-#: models.py:121
+#: models.py:133
 msgid "Auf der Startseite"
 msgstr ""
 
-#: models.py:124
+#: models.py:136
 msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
 msgstr ""
 
-#: models.py:129
+#: models.py:141
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:135
+#: models.py:147
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:138
+#: models.py:150
 msgid "Beginn"
 msgstr ""
 
-#: models.py:139
+#: models.py:151
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr ""
 
-#: models.py:141
+#: models.py:153
 msgid "Dauer in Minuten"
 msgstr ""
 
-#: models.py:145
+#: models.py:157
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr ""
 
-#: models.py:150
+#: models.py:162
 msgid "Veranstaltung"
 msgstr ""
 
-#: models.py:151
+#: models.py:163
 msgid "Veranstaltungen"
 msgstr ""
 
-#: models.py:167 models.py:173
+#: models.py:179 models.py:185
 msgid "Datei"
 msgstr ""
 
-#: models.py:174
+#: models.py:186
 msgid "Dateien"
 msgstr ""
 
