@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-23 23:26+0100\n"
+"POT-Creation-Date: 2015-02-25 22:59+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 msgid "Homepage der ESG Leipzig ab 2015"
 msgstr ""
 
-#: default_settings.py:82
+#: default_settings.py:83
 msgid "Deutsch"
 msgstr ""
 
-#: default_settings.py:83
+#: default_settings.py:84
 msgid "Englisch"
 msgstr ""
 
@@ -195,7 +195,7 @@ msgstr ""
 msgid "Dateien"
 msgstr ""
 
-#: templates/base.html:11 templates/base.html.py:22 templates/base.html:96
+#: templates/base.html:11 templates/base.html.py:22 templates/base.html:101
 #: templatetags/custom_templatetags.py:31
 msgid "Evangelische Studierendengemeinde Leipzig"
 msgstr ""
@@ -232,11 +232,15 @@ msgstr ""
 msgid "Sprache ändern"
 msgstr ""
 
-#: templates/base.html:131 templates/home.html:71
+#: templates/base.html:97 templates/home.html:36
+msgid "Der rote Hahn, das Symbol der ESG"
+msgstr ""
+
+#: templates/base.html:136 templates/home.html:76
 msgid "Quellcode"
 msgstr ""
 
-#: templates/base.html:132 templates/home.html:72
+#: templates/base.html:137 templates/home.html:77
 msgid "Administration"
 msgstr ""
 
@@ -244,20 +248,20 @@ msgstr ""
 msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Kalender."
 msgstr ""
 
-#: templates/home.html:36
+#: templates/home.html:41
 msgid ""
 "Herzlich willkommen auf der Webseite der Evangelischen Studierendengemeinde "
 "(ESG) Leipzig. Schau dich um und komm vorbei. Wir freuen uns auf dich."
 msgstr ""
 
-#: templates/home.html:41
+#: templates/home.html:46
 msgid "Weiter gehts hier"
 msgstr ""
 
-#: templates/home.html:47
+#: templates/home.html:52
 msgid "Die nächsten Veranstaltungen"
 msgstr ""
 
-#: templates/home.html:57
+#: templates/home.html:62
 msgid "Datum und Uhrzeit"
 msgstr ""
