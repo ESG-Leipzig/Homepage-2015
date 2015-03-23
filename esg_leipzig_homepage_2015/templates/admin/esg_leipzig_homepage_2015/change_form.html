@@ -1,0 +1,20 @@
+{% extends 'admin/change_form.html' %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript">
+        // Disable form fields with id headline and content so that theses
+        // fields are disabled for flatpages and events in Django admin. The
+        // manager should use the translation fields instead.
+        //
+        // This is a little bit hacky because if someone later adds models
+        // and admin sites in this app with fields headline and content these
+        // fields will be disabled too but one might not expect this.
+        (function($) {
+            $(document).ready(function($) {
+                $('#id_headline').prop('disabled', true);
+                $('#id_content').prop('disabled', true);
+            });
+        })(django.jQuery);
+    </script>
+{% endblock %}
