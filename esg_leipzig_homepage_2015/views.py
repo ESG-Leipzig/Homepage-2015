@@ -44,7 +44,8 @@ class CalendarView(generic.ListView):
         for event in context['event_list']:
             event_dict = {
                 'title': event.title,
-                'start': event.begin.isoformat()}
+                'start': event.begin.isoformat(),
+                'description': event.content}
             if event.duration:
                 event_dict['end'] = event.end.isoformat()
             event_list.append(event_dict)

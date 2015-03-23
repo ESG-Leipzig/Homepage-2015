@@ -9,7 +9,8 @@
 
 {% block stylesheets %}
     {{ block.super }}
-    <link href="{% static 'fullcalendar/dist/fullcalendar.css' %}" rel="stylesheet">
+    <link href="{% static 'fullcalendar/dist/fullcalendar.min.css' %}" rel="stylesheet">
+    <link href="{% static 'qtip2/jquery.qtip.min.css' %}" rel="stylesheet">
     <style>
         /* Allow wrapping event titles by overriding default fullcalendar CSS */
         .fc-day-grid-event > .fc-content {white-space: normal;}
@@ -18,15 +19,28 @@
 
 {% block javascript %}
     {{ block.super }}
-    <script src="{% static 'moment/moment.js' %}"></script>
+    <script src="{% static 'moment/min/moment.min.js' %}"></script>
     <script src="{% static 'fullcalendar/dist/fullcalendar.min.js' %}"></script>
     <script src="{% static 'fullcalendar/dist/lang-all.js' %}"></script>
+    <script src="{% static 'qtip2/jquery.qtip.min.js' %}"></script>
     <script>
         $(document).ready(function() {
             $('#calendar').fullCalendar({
                 events: {{ event_list_json|safe }},
                 lang: '{{ LANGUAGE_CODE }}',
                 timezone: 'local',
+                eventRender: function(event, element, view) {
+                    element.qtip({
+                        content: event.description,
+                        show: {
+                            event: 'click',
+                            delay: 0,
+                        },
+                        hide: {
+                            event: 'unfocus'
+                        }
+                    });
+                }
             });
         });
     </script>
