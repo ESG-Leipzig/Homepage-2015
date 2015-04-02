@@ -148,7 +148,7 @@
             <script>
                 $(document).ready(function () {
                     // Trigger submit event when user chooses a language.
-                    $('#language-form option').click(function () {
+                    $('#language').change(function () {
                         $(this).parents('form').submit();
                     });
                 });
