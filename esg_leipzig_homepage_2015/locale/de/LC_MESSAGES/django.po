@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 17:32+0200\n"
+"POT-Creation-Date: 2015-04-05 18:26+0200\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,7 +36,7 @@ msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr ""
 
-#: models.py:23 models.py:138
+#: models.py:23 models.py:146
 msgid "Titel"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgid ""
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:53 models.py:144
+#: models.py:53 models.py:152
 msgid "Inhalt (HTML)"
 msgstr ""
 
@@ -142,56 +142,90 @@ msgid ""
 msgstr ""
 
 #: models.py:133
-msgid "Auf der Startseite"
+msgid "Grau"
+msgstr ""
+
+#: models.py:134
+msgid "Dunkelblau"
+msgstr ""
+
+#: models.py:135
+msgid "Grün"
 msgstr ""
 
 #: models.py:136
-msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
+msgid "Hellblau"
+msgstr ""
+
+#: models.py:137
+msgid "Gelb"
+msgstr ""
+
+#: models.py:138
+msgid "Rot"
 msgstr ""
 
 #: models.py:141
+msgid "Auf der Startseite"
+msgstr ""
+
+#: models.py:144
+msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
+msgstr ""
+
+#: models.py:149
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:147
+#: models.py:155
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:150
+#: models.py:158
 msgid "Beginn"
 msgstr ""
 
-#: models.py:151
+#: models.py:159
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr ""
 
-#: models.py:153
+#: models.py:161
 msgid "Dauer in Minuten"
 msgstr ""
 
-#: models.py:157
+#: models.py:165
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr ""
 
-#: models.py:162
+#: models.py:168
+msgid "Farbe"
+msgstr ""
+
+#: models.py:173
+msgid ""
+"Die Farben entsprechen den Farben für Buttons, Labels usw. bei Twitter "
+"Bootstrap."
+msgstr ""
+
+#: models.py:178
 msgid "Veranstaltung"
 msgstr ""
 
-#: models.py:163
+#: models.py:179
 msgid "Veranstaltungen"
 msgstr ""
 
-#: models.py:179 models.py:185
+#: models.py:195 models.py:201
 msgid "Datei"
 msgstr ""
 
-#: models.py:186
+#: models.py:202
 msgid "Dateien"
 msgstr ""
 
@@ -244,11 +278,11 @@ msgstr ""
 msgid "Administration"
 msgstr ""
 
-#: templates/calendar.html:50
+#: templates/calendar.html:58
 msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Kalender."
 msgstr ""
 
-#: templates/calendar.html:54
+#: templates/calendar.html:62
 msgid "Für mehr Infos klicke auf den Kalendereintrag."
 msgstr ""
 

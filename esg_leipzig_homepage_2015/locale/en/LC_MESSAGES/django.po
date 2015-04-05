@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 17:32+0200\n"
-"PO-Revision-Date: 2015-04-02 15:41+0000\n"
+"POT-Creation-Date: 2015-04-05 18:26+0200\n"
+"PO-Revision-Date: 2015-04-05 16:29+0000\n"
 "Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +42,7 @@ msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr "Example: 'legal-notice'. Each page must have an unique entry."
 
-#: models.py:23 models.py:138
+#: models.py:23 models.py:146
 msgid "Titel"
 msgstr "Title"
 
@@ -81,7 +81,7 @@ msgid ""
 " Sprachfeldern vorzunehmen."
 msgstr "Example: 'We gather for service and worship.'. The headline is shown below the header image. Changes have always to be done in the language fields."
 
-#: models.py:53 models.py:144
+#: models.py:53 models.py:152
 msgid "Inhalt (HTML)"
 msgstr "Content (HTML)"
 
@@ -150,56 +150,90 @@ msgid ""
 msgstr "Error: There must not be a circular hierarchy. Choose another parent element."
 
 #: models.py:133
+msgid "Grau"
+msgstr "Grey"
+
+#: models.py:134
+msgid "Dunkelblau"
+msgstr "Dark blue"
+
+#: models.py:135
+msgid "Grün"
+msgstr "Green"
+
+#: models.py:136
+msgid "Hellblau"
+msgstr "Light blue"
+
+#: models.py:137
+msgid "Gelb"
+msgstr "Yellow"
+
+#: models.py:138
+msgid "Rot"
+msgstr "Red"
+
+#: models.py:141
 msgid "Auf der Startseite"
 msgstr "On homepage"
 
-#: models.py:136
+#: models.py:144
 msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
 msgstr "If disabled, the event appears only in the calendar."
 
-#: models.py:141
+#: models.py:149
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr "Example: 'Service with sacrament'. Changes have always to be done in the language fields."
 
-#: models.py:147
+#: models.py:155
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr "All HTML tags can be used. Changes have always to be done in the language fields."
 
-#: models.py:150
+#: models.py:158
 msgid "Beginn"
 msgstr "Begin"
 
-#: models.py:151
+#: models.py:159
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr "Example: '2013-07-20 14:00'."
 
-#: models.py:153
+#: models.py:161
 msgid "Dauer in Minuten"
 msgstr "Duration in minutes"
 
-#: models.py:157
+#: models.py:165
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr "If empty, an end time is not shown."
 
-#: models.py:162
+#: models.py:168
+msgid "Farbe"
+msgstr "Color"
+
+#: models.py:173
+msgid ""
+"Die Farben entsprechen den Farben für Buttons, Labels usw. bei Twitter "
+"Bootstrap."
+msgstr "The colors correspond to the colors of buttons, labels and so on at Twitter Bootstrap."
+
+#: models.py:178
 msgid "Veranstaltung"
 msgstr "Event"
 
-#: models.py:163
+#: models.py:179
 msgid "Veranstaltungen"
 msgstr "Events"
 
-#: models.py:179 models.py:185
+#: models.py:195 models.py:201
 msgid "Datei"
 msgstr "File"
 
-#: models.py:186
+#: models.py:202
 msgid "Dateien"
 msgstr "Files"
 
@@ -252,11 +286,11 @@ msgstr "Source code"
 msgid "Administration"
 msgstr "Administration"
 
-#: templates/calendar.html:50
+#: templates/calendar.html:58
 msgid "Alle Veranstaltungen der Gemeinde findet ihr hier im Kalender."
 msgstr "You find an overview of all events of the parish here in the calendar."
 
-#: templates/calendar.html:54
+#: templates/calendar.html:62
 msgid "Für mehr Infos klicke auf den Kalendereintrag."
 msgstr "Click on the event to get more information."
 
