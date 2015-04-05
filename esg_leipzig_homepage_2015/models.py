@@ -129,6 +129,14 @@ class Event(models.Model):
     """
     Model for events that appear in the calendar.
     """
+    COLOR_CHOICES = (
+        ('event-default', ugettext_lazy('Grau')),
+        ('event-primary', ugettext_lazy('Dunkelblau')),
+        ('event-success', ugettext_lazy('Grün')),
+        ('event-info', ugettext_lazy('Hellblau')),
+        ('event-warning', ugettext_lazy('Gelb')),
+        ('event-danger', ugettext_lazy('Rot')))
+
     on_home = models.BooleanField(
         ugettext_lazy('Auf der Startseite'),
         default=True,
@@ -156,6 +164,14 @@ class Event(models.Model):
         help_text=ugettext_lazy(
             'Wenn nichts angegeben ist, wird keine Zeit für das Ende der '
             'Veranstaltung angezeigt.'))
+    css_class_name = models.CharField(
+        ugettext_lazy('Farbe'),
+        max_length=255,
+        choices=COLOR_CHOICES,
+        default='event-primary',
+        help_text=ugettext_lazy(
+            'Die Farben entsprechen den Farben für Buttons, Labels usw. bei '
+            'Twitter Bootstrap.'))
 
     class Meta:
         ordering = ('begin',)

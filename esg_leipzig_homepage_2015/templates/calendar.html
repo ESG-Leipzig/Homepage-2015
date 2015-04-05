@@ -14,6 +14,14 @@
     <style>
         /* Allow wrapping event titles by overriding default fullcalendar CSS */
         .fc-day-grid-event > .fc-content {white-space: normal;}
+
+        /* Event color mapping with bootstrap color names */
+        .event-default {background-color: #777; border-color: #777;}
+        .event-primary {background-color: #337ab7; border-color: #337ab7;}
+        .event-success {background-color: #5cb85c; border-color: #5cb85c;}
+        .event-info {background-color: #5bc0de; border-color: #5bc0de;}
+        .event-warning {background-color: #f0ad4e; border-color: #f0ad4e;}
+        .event-danger {background-color: #d9534f; border-color: #d9534f;}
     </style>
 {% endblock %}
 
@@ -51,6 +59,6 @@
 {% endblock %}
 
 {% block main_content %}
-    <p class="label label-default">{% trans 'Für mehr Infos klicke auf den Kalendereintrag.' %}</p>
+    <p class="label label-primary">{% trans 'Für mehr Infos klicke auf den Kalendereintrag.' %}</p>
     <div id="calendar" style="margin-top:1.5em;"></div>
 {% endblock %}
