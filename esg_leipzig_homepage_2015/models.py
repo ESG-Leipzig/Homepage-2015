@@ -194,7 +194,9 @@ class MediaFile(models.Model):
     mediafile = models.FileField(
         ugettext_lazy('Datei'),
         max_length=255)
-    uploaded_on = models.DateTimeField(auto_now_add=True)
+    uploaded_on = models.DateTimeField(
+        ugettext_lazy('Hochgeladen am'),
+        auto_now_add=True)
 
     class Meta:
         ordering = ('-uploaded_on',)

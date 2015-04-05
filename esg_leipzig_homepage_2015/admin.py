@@ -23,7 +23,26 @@ class FlatPageAdmin(admin.ModelAdmin):
 
 class MediaFileAdmin(admin.ModelAdmin):
     date_hierarchy = 'uploaded_on'
-    list_display = ('mediafile', 'uploaded_on',)
+    list_display = ('mediafile', 'uploaded_on', 'mediafile_url')
+
+    def mediafile_url(self, obj):
+        """
+        Returns the URL to the uploaded file.
+        """
+        return obj.mediafile.url
+    mediafile_url.short_description = ugettext_lazy('Adresse (URL)')
+
+    def has_change_permission(self, request, obj=None):
+        """
+        Returns the default value (True) if obj is None else False. This
+        indicates editing of objects of this type is permitted in general
+        but not for (every) specific object. This way we get the admin list
+        view but not the update (change) views.
+        """
+        if obj is not None:
+            return False
+        return super().has_change_permission(request, obj)
+
 
 site_instance = admin.site
 site_instance.site_title = ugettext_lazy('ESG Leipzig Administration')

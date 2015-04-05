@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-05 18:26+0200\n"
-"PO-Revision-Date: 2015-04-05 16:29+0000\n"
+"POT-Creation-Date: 2015-04-05 20:47+0200\n"
+"PO-Revision-Date: 2015-04-05 18:49+0000\n"
 "Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,11 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:29 admin.py:30
+#: admin.py:33
+msgid "Adresse (URL)"
+msgstr "Address (URL)"
+
+#: admin.py:48 admin.py:49
 msgid "ESG Leipzig Administration"
 msgstr "ESG Leipzig Administration"
 
@@ -229,11 +233,15 @@ msgstr "Event"
 msgid "Veranstaltungen"
 msgstr "Events"
 
-#: models.py:195 models.py:201
+#: models.py:195 models.py:203
 msgid "Datei"
 msgstr "File"
 
-#: models.py:202
+#: models.py:198
+msgid "Hochgeladen am"
+msgstr "Uploaded on"
+
+#: models.py:204
 msgid "Dateien"
 msgstr "Files"
 
