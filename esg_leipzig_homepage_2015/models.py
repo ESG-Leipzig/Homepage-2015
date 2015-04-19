@@ -137,11 +137,6 @@ class Event(models.Model):
         ('event-warning', ugettext_lazy('Gelb')),
         ('event-danger', ugettext_lazy('Rot')))
 
-    on_home = models.BooleanField(
-        ugettext_lazy('Auf der Startseite'),
-        default=True,
-        help_text=ugettext_lazy(
-            'Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender.'))
     title = models.CharField(
         ugettext_lazy('Titel'),
         max_length=255,
@@ -164,6 +159,13 @@ class Event(models.Model):
         help_text=ugettext_lazy(
             'Wenn nichts angegeben ist, wird keine Zeit für das Ende der '
             'Veranstaltung angezeigt.'))
+    on_home_before_begin = models.PositiveIntegerField(
+        ugettext_lazy('Auf der Startseite (in Tagen)'),
+        default=30,
+        help_text=ugettext_lazy(
+            'Die Veranstaltung erscheint so viele Tage vor Beginn auf der '
+            'Startseite. Wählen Sie 0, wenn die Veranstaltung nur im Kalender '
+            'und niemals auf der Startseite erscheinen soll.'))
     css_class_name = models.CharField(
         ugettext_lazy('Farbe'),
         max_length=255,

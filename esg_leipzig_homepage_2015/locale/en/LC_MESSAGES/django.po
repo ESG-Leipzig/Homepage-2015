@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homepage-2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-05 20:47+0200\n"
-"PO-Revision-Date: 2015-04-05 18:49+0000\n"
+"POT-Creation-Date: 2015-04-20 00:52+0200\n"
+"PO-Revision-Date: 2015-04-19 22:56+0000\n"
 "Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/homepage-2015/language/en/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +46,7 @@ msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr "Example: 'legal-notice'. Each page must have an unique entry."
 
-#: models.py:23 models.py:146
+#: models.py:23 models.py:141
 msgid "Titel"
 msgstr "Title"
 
@@ -85,7 +85,7 @@ msgid ""
 " Sprachfeldern vorzunehmen."
 msgstr "Example: 'We gather for service and worship.'. The headline is shown below the header image. Changes have always to be done in the language fields."
 
-#: models.py:53 models.py:152
+#: models.py:53 models.py:147
 msgid "Inhalt (HTML)"
 msgstr "Content (HTML)"
 
@@ -177,71 +177,74 @@ msgstr "Yellow"
 msgid "Rot"
 msgstr "Red"
 
-#: models.py:141
-msgid "Auf der Startseite"
-msgstr "On homepage"
-
 #: models.py:144
-msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
-msgstr "If disabled, the event appears only in the calendar."
-
-#: models.py:149
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr "Example: 'Service with sacrament'. Changes have always to be done in the language fields."
 
-#: models.py:155
+#: models.py:150
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr "All HTML tags can be used. Changes have always to be done in the language fields."
 
-#: models.py:158
+#: models.py:153
 msgid "Beginn"
 msgstr "Begin"
 
-#: models.py:159
+#: models.py:154
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr "Example: '2013-07-20 14:00'."
 
-#: models.py:161
+#: models.py:156
 msgid "Dauer in Minuten"
 msgstr "Duration in minutes"
 
-#: models.py:165
+#: models.py:160
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr "If empty, an end time is not shown."
 
-#: models.py:168
+#: models.py:163
+msgid "Auf der Startseite (in Tagen)"
+msgstr "On homepage (in days)"
+
+#: models.py:166
+msgid ""
+"Die Veranstaltung erscheint so viele Tage vor Beginn auf der Startseite. "
+"Wählen Sie 0, wenn die Veranstaltung nur im Kalender und niemals auf der "
+"Startseite erscheinen soll."
+msgstr "The event appears as many days before its begin on homepage. Choose 0 to show the event only in the calendar and never on homepage."
+
+#: models.py:170
 msgid "Farbe"
 msgstr "Color"
 
-#: models.py:173
+#: models.py:175
 msgid ""
 "Die Farben entsprechen den Farben für Buttons, Labels usw. bei Twitter "
 "Bootstrap."
 msgstr "The colors correspond to the colors of buttons, labels and so on at Twitter Bootstrap."
 
-#: models.py:178
+#: models.py:180
 msgid "Veranstaltung"
 msgstr "Event"
 
-#: models.py:179
+#: models.py:181
 msgid "Veranstaltungen"
 msgstr "Events"
 
-#: models.py:195 models.py:203
+#: models.py:197 models.py:205
 msgid "Datei"
 msgstr "File"
 
-#: models.py:198
+#: models.py:200
 msgid "Hochgeladen am"
 msgstr "Uploaded on"
 
-#: models.py:204
+#: models.py:206
 msgid "Dateien"
 msgstr "Files"
 

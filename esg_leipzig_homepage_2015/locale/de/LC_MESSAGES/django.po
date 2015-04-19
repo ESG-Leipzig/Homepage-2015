@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-05 20:47+0200\n"
+"POT-Creation-Date: 2015-04-20 00:52+0200\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +40,7 @@ msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr ""
 
-#: models.py:23 models.py:146
+#: models.py:23 models.py:141
 msgid "Titel"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgid ""
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:53 models.py:152
+#: models.py:53 models.py:147
 msgid "Inhalt (HTML)"
 msgstr ""
 
@@ -169,71 +169,74 @@ msgstr ""
 msgid "Rot"
 msgstr ""
 
-#: models.py:141
-msgid "Auf der Startseite"
-msgstr ""
-
 #: models.py:144
-msgid "Wenn deaktiviert, erscheint die Veranstaltung nur im Kalender."
-msgstr ""
-
-#: models.py:149
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:155
+#: models.py:150
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:158
+#: models.py:153
 msgid "Beginn"
 msgstr ""
 
-#: models.py:159
+#: models.py:154
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr ""
 
-#: models.py:161
+#: models.py:156
 msgid "Dauer in Minuten"
 msgstr ""
 
-#: models.py:165
+#: models.py:160
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr ""
 
-#: models.py:168
+#: models.py:163
+msgid "Auf der Startseite (in Tagen)"
+msgstr ""
+
+#: models.py:166
+msgid ""
+"Die Veranstaltung erscheint so viele Tage vor Beginn auf der Startseite. "
+"Wählen Sie 0, wenn die Veranstaltung nur im Kalender und niemals auf der "
+"Startseite erscheinen soll."
+msgstr ""
+
+#: models.py:170
 msgid "Farbe"
 msgstr ""
 
-#: models.py:173
+#: models.py:175
 msgid ""
 "Die Farben entsprechen den Farben für Buttons, Labels usw. bei Twitter "
 "Bootstrap."
 msgstr ""
 
-#: models.py:178
+#: models.py:180
 msgid "Veranstaltung"
 msgstr ""
 
-#: models.py:179
+#: models.py:181
 msgid "Veranstaltungen"
 msgstr ""
 
-#: models.py:195 models.py:203
+#: models.py:197 models.py:205
 msgid "Datei"
 msgstr ""
 
-#: models.py:198
+#: models.py:200
 msgid "Hochgeladen am"
 msgstr ""
 
-#: models.py:204
+#: models.py:206
 msgid "Dateien"
 msgstr ""
 

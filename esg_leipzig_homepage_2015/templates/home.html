@@ -50,7 +50,7 @@
         </div><!-- /.jumbotron -->
         <div id="content">
             <h2 class="sr-only">{% trans 'Die nächsten Veranstaltungen' %}</h2>
-                {% for event in event_list %}
+                {% for event in object_list %}
                     {% if not forloop.counter|divisibleby:2 %}
                         <div class="row marketing">
                     {% endif %}

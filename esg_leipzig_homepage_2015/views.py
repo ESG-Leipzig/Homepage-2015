@@ -21,10 +21,16 @@ class HomeView(generic.ListView):
         Returns a queryset of all future events that should appear on home.
         Uses settings.EVENT_DELAY_IN_MINUTES to determine the range.
         """
-        hiding_time = timezone.now() - datetime.timedelta(
+        time_to_hide = timezone.now() - datetime.timedelta(
             minutes=settings.EVENT_DELAY_IN_MINUTES)
-        return super().get_queryset().filter(
-            on_home=True, begin__gte=hiding_time)
+        queryset = super().get_queryset().filter(begin__gte=time_to_hide)
+        result = []
+        for event in queryset:
+            time_to_show = timezone.now() + datetime.timedelta(
+                days=event.on_home_before_begin)
+            if event.on_home_before_begin > 0 and event.begin <= time_to_show:
+                result.append(event)
+        return result
 
 
 class CalendarView(generic.ListView):

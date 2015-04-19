@@ -7,7 +7,7 @@ from .models import Event, FlatPage, MediaFile
 
 class EventAdmin(admin.ModelAdmin):
     date_hierarchy = 'begin'
-    list_display = ('title', 'begin', 'duration', 'on_home',)
+    list_display = ('title', 'begin', 'duration', 'on_home_before_begin',)
 
     def get_changeform_initial_data(self, request):
         return {'content': '<p>\n\n</p>'}
