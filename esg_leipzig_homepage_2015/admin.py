@@ -1,13 +1,46 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
+from django.utils import timezone
 from django.utils.translation import ugettext_lazy
 
 from .models import Event, FlatPage, MediaFile
 
 
+class ComingEventsFilter(admin.SimpleListFilter):
+    """
+    Special filter class for admin list_filter: See
+    https://docs.djangoproject.com/en/1.7/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_filter
+    """
+    title = ugettext_lazy('Beginn des Events')
+    parameter_name = 'filter'
+
+    def lookups(self, request, model_admin):
+        """
+        Returns a list of tuples. The first element in each
+        tuple is the coded value for the option that will
+        appear in the URL query. The second element is the
+        human-readable name for the option that will appear
+        in the right sidebar.
+        """
+        return (
+            ('coming', ugettext_lazy('In der Zukunft')),
+        )
+
+    def queryset(self, request, queryset):
+        """
+        Returns the filtered queryset based on the value
+        provided in the query string and retrievable via
+        `self.value()`.
+        """
+        # Compare the requested value to decide how to filter the queryset.
+        if self.value() == 'coming':
+            return queryset.filter(begin__gte=timezone.now())
+
+
 class EventAdmin(admin.ModelAdmin):
     date_hierarchy = 'begin'
     list_display = ('title', 'begin', 'duration', 'on_home_before_begin',)
+    list_filter = (ComingEventsFilter,)
 
     def get_changeform_initial_data(self, request):
         return {'content': '<p>\n\n</p>'}
