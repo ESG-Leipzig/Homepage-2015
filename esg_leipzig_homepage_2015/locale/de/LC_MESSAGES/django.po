@@ -5,17 +5,29 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 00:52+0200\n"
+"POT-Creation-Date: 2015-05-07 23:42+0200\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:33
+#: admin.py:14
+msgid "Beginn der Veranstaltung"
+msgstr ""
+
+#: admin.py:26
+msgid "In der Vergangenheit"
+msgstr ""
+
+#: admin.py:27
+msgid "In der Zukunft"
+msgstr ""
+
+#: admin.py:69
 msgid "Adresse (URL)"
 msgstr ""
 
-#: admin.py:48 admin.py:49
+#: admin.py:84 admin.py:85
 msgid "ESG Leipzig Administration"
 msgstr ""
 

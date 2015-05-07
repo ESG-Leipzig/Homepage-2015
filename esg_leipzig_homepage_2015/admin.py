@@ -11,7 +11,7 @@ class ComingEventsFilter(admin.SimpleListFilter):
     Special filter class for admin list_filter: See
     https://docs.djangoproject.com/en/1.7/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_filter
     """
-    title = ugettext_lazy('Beginn des Events')
+    title = ugettext_lazy('Beginn der Veranstaltung')
     parameter_name = 'filter'
 
     def lookups(self, request, model_admin):
@@ -23,7 +23,8 @@ class ComingEventsFilter(admin.SimpleListFilter):
         in the right sidebar.
         """
         return (
-            ('coming', ugettext_lazy('In der Zukunft')),
+            ('past', ugettext_lazy('In der Vergangenheit')),
+            ('future', ugettext_lazy('In der Zukunft')),
         )
 
     def queryset(self, request, queryset):
@@ -33,7 +34,9 @@ class ComingEventsFilter(admin.SimpleListFilter):
         `self.value()`.
         """
         # Compare the requested value to decide how to filter the queryset.
-        if self.value() == 'coming':
+        if self.value() == 'past':
+            return queryset.filter(begin__lte=timezone.now())
+        if self.value() == 'future':
             return queryset.filter(begin__gte=timezone.now())
 
 
