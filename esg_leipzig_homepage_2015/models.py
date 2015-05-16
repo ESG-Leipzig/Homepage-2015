@@ -2,7 +2,11 @@ import datetime
 
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import (
+    MaxValueValidator,
+    MinValueValidator,
+    RegexValidator
+)
 from django.db import models
 from django.utils.formats import localize
 from django.utils.translation import ugettext as _
@@ -123,6 +127,57 @@ class FlatPage(models.Model):
                     'Fehler: Es darf keine zirkuläre Hierarchie erstellt '
                     'werden. Wählen Sie ein anderes Elternelement.'))
             ancestor = ancestor.parent
+
+
+class LinkToFlatPage(models.Model):
+    """
+    Model for extra links to static pages so that they can be reached at
+    more than one URL. Uses redirection with status codes 301 or 302.
+    """
+    path = models.CharField(
+        ugettext_lazy('Pfad (relativ zur Startseite)'),
+        unique=True,
+        max_length=255,
+        validators=[
+            RegexValidator(
+                regex=r'^[-\w/]+/$',
+                message=ugettext_lazy(
+                    'Nur Buchstaben, Zahlen, Binde-, Schräg- oder '
+                    'Unterstriche sind zulässig. Am Ende muss ein '
+                    'Schrägstrich stehen.'))],
+        help_text=ugettext_lazy(
+            "Beispiel: 'chor/'. Dies bewirkt, dass der Aufruf von ./chor/ "
+            "relativ zur Startseite zur ausgewählten statischen Seite, zum "
+            "Beispiel ./arbeitskreise/chor/ weitergeleitet wird. Der "
+            "abschließende Schrägstrich darf nicht vergessen werden."))
+    flatpage = models.ForeignKey(
+        FlatPage,
+        verbose_name=ugettext_lazy('Statische Seite'),
+        help_text=ugettext_lazy(
+            'Statische Seite, zu der der Link weiterleiten soll.'))
+    permanent = models.BooleanField(
+        ugettext_lazy('301-Weiterleitung'),
+        blank=True,
+        default=False,
+        help_text=ugettext_lazy(
+            'Wenn nicht ausgewählt, wird eine 302-Weiterleitung verwendet.'))
+
+    class Meta:
+        ordering = ('path',)
+        verbose_name = ugettext_lazy('Link zu einer statischen Seite')
+        verbose_name_plural = ugettext_lazy('Links zu statischen Seiten')
+
+    def __str__(self):
+        return '%(path)s --> %(title)s' % {
+            'path': self.get_fullpath(),
+            'title': self.flatpage}
+
+    def get_fullpath(self):
+        """
+        Returns the full path of this link which is the URL of the home
+        view combined with the URL of this model instance.
+        """
+        return reverse('home') + self.path
 
 
 class Event(models.Model):

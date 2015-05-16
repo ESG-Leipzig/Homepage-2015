@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy
 
-from .models import Event, FlatPage, MediaFile
+from .models import Event, FlatPage, LinkToFlatPage, MediaFile
 
 
 class ComingEventsFilter(admin.SimpleListFilter):
@@ -16,11 +16,10 @@ class ComingEventsFilter(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         """
-        Returns a list of tuples. The first element in each
-        tuple is the coded value for the option that will
-        appear in the URL query. The second element is the
-        human-readable name for the option that will appear
-        in the right sidebar.
+        Returns a list of tuples. The first element in each tuple is the
+        coded value for the option that will appear in the URL query. The
+        second element is the human-readable name for the option that will
+        appear in the right sidebar.
         """
         return (
             ('past', ugettext_lazy('In der Vergangenheit')),
@@ -29,9 +28,8 @@ class ComingEventsFilter(admin.SimpleListFilter):
 
     def queryset(self, request, queryset):
         """
-        Returns the filtered queryset based on the value
-        provided in the query string and retrievable via
-        `self.value()`.
+        Returns the filtered queryset based on the value provided in the
+        query string and retrievable via `self.value()`.
         """
         # Compare the requested value to decide how to filter the queryset.
         if self.value() == 'past':
@@ -57,9 +55,13 @@ class FlatPageAdmin(admin.ModelAdmin):
                            '\n\n</div>\n</div>'}
 
 
+class LinkToFlatPageAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'path', 'flatpage', 'permanent',)
+
+
 class MediaFileAdmin(admin.ModelAdmin):
     date_hierarchy = 'uploaded_on'
-    list_display = ('mediafile', 'uploaded_on', 'mediafile_url')
+    list_display = ('mediafile', 'uploaded_on', 'mediafile_url',)
 
     def mediafile_url(self, obj):
         """
@@ -86,5 +88,6 @@ site_instance.site_header = ugettext_lazy('ESG Leipzig Administration')
 
 site_instance.register(Event, EventAdmin)
 site_instance.register(FlatPage, FlatPageAdmin)
+site_instance.register(LinkToFlatPage, LinkToFlatPageAdmin)
 site_instance.register(MediaFile, MediaFileAdmin)
 site_instance.unregister(Group)
