@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-07 23:42+0200\n"
+"POT-Creation-Date: 2015-05-16 20:05+0200\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,19 +15,19 @@ msgstr ""
 msgid "Beginn der Veranstaltung"
 msgstr ""
 
-#: admin.py:26
+#: admin.py:25
 msgid "In der Vergangenheit"
 msgstr ""
 
-#: admin.py:27
+#: admin.py:26
 msgid "In der Zukunft"
 msgstr ""
 
-#: admin.py:69
+#: admin.py:71
 msgid "Adresse (URL)"
 msgstr ""
 
-#: admin.py:84 admin.py:85
+#: admin.py:86 admin.py:87
 msgid "ESG Leipzig Administration"
 msgstr ""
 
@@ -35,67 +35,67 @@ msgstr ""
 msgid "Homepage der ESG Leipzig ab 2015"
 msgstr ""
 
-#: default_settings.py:83
+#: default_settings.py:84
 msgid "Deutsch"
 msgstr ""
 
-#: default_settings.py:84
+#: default_settings.py:85
 msgid "Englisch"
 msgstr ""
 
-#: models.py:17
+#: models.py:21
 msgid "Slug/URL"
 msgstr ""
 
-#: models.py:20
+#: models.py:24
 msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr ""
 
-#: models.py:23 models.py:141
+#: models.py:27 models.py:196
 msgid "Titel"
 msgstr ""
 
-#: models.py:26
+#: models.py:30
 msgid ""
 "Beispiel: 'Impressum'. Der Titel wird als Link in den Menüs angezeigt. "
 "Änderungen sind immer in den Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:30
+#: models.py:34
 msgid "In der oberen Navigationsleiste"
 msgstr ""
 
-#: models.py:34
+#: models.py:38
 msgid "Im rechten Hauptmenü"
 msgstr ""
 
-#: models.py:38
+#: models.py:42
 msgid "URL zum Titelbild"
 msgstr ""
 
-#: models.py:42
+#: models.py:46
 msgid ""
 "Beispiel: '/static/custom/myimage.jpg'. Die Bilddatei muss manuell auf den "
 "Server geladen werden."
 msgstr ""
 
-#: models.py:45
+#: models.py:49
 msgid "Schlagzeile"
 msgstr ""
 
-#: models.py:49
+#: models.py:53
 msgid ""
 "Beispiel: 'Wir feiern gemeinsam Gottesdienste und Andachten.'. Die "
 "Schlagzeile wird unter dem Titelbild angezeigt. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:53 models.py:147
+#: models.py:57 models.py:202
 msgid "Inhalt (HTML)"
 msgstr ""
 
-#: models.py:56
+#: models.py:60
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Vergleiche <a href=\"https://"
 "github.com/ESG-Leipzig/Homepage-2015/wiki/Beispiel-f%C3%BCr-den-Inhalt-einer-"
@@ -103,152 +103,190 @@ msgid ""
 "vorzunehmen."
 msgstr ""
 
-#: models.py:62
+#: models.py:66
 msgid "Elternelement"
 msgstr ""
 
-#: models.py:66
+#: models.py:70
 msgid ""
 "Wenn die Seite eine Unterseite sein soll, ist hier das Elternelement "
 "einzutragen. Bleibt das Feld leer, residiert die Seite auf der obersten "
 "Ebene. Unterseiten erscheinen nicht in den Menüs."
 msgstr ""
 
-#: models.py:71
+#: models.py:75
 msgid "Platzierung"
 msgstr ""
 
-#: models.py:74
+#: models.py:78
 msgid "Eine höhere Zahl bedeutet, dass der Eintrag im Menü weiter unten steht."
 msgstr ""
 
-#: models.py:77
+#: models.py:81
 msgid "Vorlage"
 msgstr ""
 
-#: models.py:81
+#: models.py:85
 msgid ""
 "Beispiel: 'meine_seite.html'. Wenn nichts oder etwas Falsches angegeben ist, "
 "wird die Vorlage 'flatpage_default.html' verwendet."
 msgstr ""
 
-#: models.py:85
+#: models.py:89
 msgid "Priorität in der Sitemap"
 msgstr ""
 
-#: models.py:91
+#: models.py:95
 msgid ""
 "Die Zahl gibt die Priorität in der Sitemap an. Sie wird von Suchmaschinen "
 "ausgewertet. Siehe <a href=\"http://www.sitemaps.org/de/protocol."
 "html#prioritydef\">Definition im Sitemapprotokoll</a>."
 msgstr ""
 
-#: models.py:98
+#: models.py:102 models.py:155
 msgid "Statische Seite"
 msgstr ""
 
-#: models.py:99
+#: models.py:103
 msgid "Statische Seiten"
 msgstr ""
 
-#: models.py:123
+#: models.py:127
 msgid ""
 "Fehler: Es darf keine zirkuläre Hierarchie erstellt werden. Wählen Sie ein "
 "anderes Elternelement."
 msgstr ""
 
-#: models.py:133
+#: models.py:138
+msgid "Pfad (relativ zur Startseite)"
+msgstr ""
+
+#: models.py:145
+msgid ""
+"Nur Buchstaben, Zahlen, Binde-, Schräg- oder Unterstriche sind zulässig. Am "
+"Ende muss ein Schrägstrich stehen."
+msgstr ""
+
+#: models.py:149
+msgid ""
+"Beispiel: 'chor/'. Dies bewirkt, dass der Aufruf von ./chor/ relativ zur "
+"Startseite zur ausgewählten statischen Seite, zum Beispiel ./arbeitskreise/"
+"chor/ weitergeleitet wird. Der abschließende Schrägstrich darf nicht "
+"vergessen werden."
+msgstr ""
+
+#: models.py:157
+msgid "Statische Seite, zu der der Link weiterleiten soll."
+msgstr ""
+
+#: models.py:159
+msgid "301-Weiterleitung"
+msgstr ""
+
+#: models.py:163
+msgid "Wenn nicht ausgewählt, wird eine 302-Weiterleitung verwendet."
+msgstr ""
+
+#: models.py:167
+msgid "Link zu einer statischen Seite"
+msgstr ""
+
+#: models.py:168
+msgid "Links zu statischen Seiten"
+msgstr ""
+
+#: models.py:188
 msgid "Grau"
 msgstr ""
 
-#: models.py:134
+#: models.py:189
 msgid "Dunkelblau"
 msgstr ""
 
-#: models.py:135
+#: models.py:190
 msgid "Grün"
 msgstr ""
 
-#: models.py:136
+#: models.py:191
 msgid "Hellblau"
 msgstr ""
 
-#: models.py:137
+#: models.py:192
 msgid "Gelb"
 msgstr ""
 
-#: models.py:138
+#: models.py:193
 msgid "Rot"
 msgstr ""
 
-#: models.py:144
+#: models.py:199
 msgid ""
 "Beispiel: 'ESG-Gottesdienst mit Abendmahl'. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:150
+#: models.py:205
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:153
+#: models.py:208
 msgid "Beginn"
 msgstr ""
 
-#: models.py:154
+#: models.py:209
 msgid "Beispiel: '2013-07-20 14:00'."
 msgstr ""
 
-#: models.py:156
+#: models.py:211
 msgid "Dauer in Minuten"
 msgstr ""
 
-#: models.py:160
+#: models.py:215
 msgid ""
 "Wenn nichts angegeben ist, wird keine Zeit für das Ende der Veranstaltung "
 "angezeigt."
 msgstr ""
 
-#: models.py:163
+#: models.py:218
 msgid "Auf der Startseite (in Tagen)"
 msgstr ""
 
-#: models.py:166
+#: models.py:221
 msgid ""
 "Die Veranstaltung erscheint so viele Tage vor Beginn auf der Startseite. "
 "Wählen Sie 0, wenn die Veranstaltung nur im Kalender und niemals auf der "
 "Startseite erscheinen soll."
 msgstr ""
 
-#: models.py:170
+#: models.py:225
 msgid "Farbe"
 msgstr ""
 
-#: models.py:175
+#: models.py:230
 msgid ""
 "Die Farben entsprechen den Farben für Buttons, Labels usw. bei Twitter "
 "Bootstrap."
 msgstr ""
 
-#: models.py:180
+#: models.py:235
 msgid "Veranstaltung"
 msgstr ""
 
-#: models.py:181
+#: models.py:236
 msgid "Veranstaltungen"
 msgstr ""
 
-#: models.py:197 models.py:205
+#: models.py:252 models.py:260
 msgid "Datei"
 msgstr ""
 
-#: models.py:200
+#: models.py:255
 msgid "Hochgeladen am"
 msgstr ""
 
-#: models.py:206
+#: models.py:261
 msgid "Dateien"
 msgstr ""
 

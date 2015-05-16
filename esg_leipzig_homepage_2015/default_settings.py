@@ -54,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'esg_leipzig_homepage_2015.middlewares.LinkToFlatPageMiddleware',
 )
 
 ROOT_URLCONF = 'esg_leipzig_homepage_2015.urls'
