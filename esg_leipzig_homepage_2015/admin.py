@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy
 
-from .models import Event, FlatPage, LinkToFlatPage, MediaFile
+from .models import Event, FlatPage, LinkToFlatPage, MediaFile, News
 
 
 class ComingEventsFilter(admin.SimpleListFilter):
@@ -82,6 +82,13 @@ class MediaFileAdmin(admin.ModelAdmin):
         return super().has_change_permission(request, obj)
 
 
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author',)
+
+    def get_changeform_initial_data(self, request):
+        return {'content': '<p>\n\n</p>'}
+
+
 site_instance = admin.site
 site_instance.site_title = ugettext_lazy('ESG Leipzig Administration')
 site_instance.site_header = ugettext_lazy('ESG Leipzig Administration')
@@ -90,4 +97,5 @@ site_instance.register(Event, EventAdmin)
 site_instance.register(FlatPage, FlatPageAdmin)
 site_instance.register(LinkToFlatPage, LinkToFlatPageAdmin)
 site_instance.register(MediaFile, MediaFileAdmin)
+site_instance.register(News, NewsAdmin)
 site_instance.unregister(Group)

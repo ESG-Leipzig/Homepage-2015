@@ -6,13 +6,14 @@ from django.http import Http404
 from django.utils import timezone
 from django.views import generic
 
-from .models import Event, FlatPage
+from .models import Event, FlatPage, News
 
 
 class HomeView(generic.ListView):
     """
     View for the first page called 'Home'.
     """
+    context_object_name = 'event_list'
     model = Event
     template_name = 'home.html'
 
@@ -31,6 +32,13 @@ class HomeView(generic.ListView):
             if event.on_home_before_begin > 0 and event.begin <= time_to_show:
                 result.append(event)
         return result
+
+    def get_context_data(self, **context):
+        """
+        Adds all news to the context.
+        """
+        news_list = News.objects.all()
+        return super().get_context_data(news_list=news_list, **context)
 
 
 class CalendarView(generic.ListView):
