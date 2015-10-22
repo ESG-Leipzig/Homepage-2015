@@ -244,6 +244,43 @@ class Event(models.Model):
         return self.begin + datetime.timedelta(minutes=duration)
 
 
+class News(models.Model):
+    """
+    Model for news on the home page.
+    """
+    title = models.CharField(
+        ugettext_lazy('Titel'),
+        max_length=255,
+        help_text=ugettext_lazy(
+            "Beispiel: 'Schrank abzugeben'. Änderungen sind immer in den "
+            "Sprachfeldern vorzunehmen."))
+    content = models.TextField(
+        ugettext_lazy('Inhalt (HTML)'),
+        blank=True,
+        help_text=ugettext_lazy(
+            'Es können alle HTML-Tags verwendet werden. Änderungen sind immer '
+            'in den Sprachfeldern vorzunehmen.'))
+    author = models.CharField(
+        ugettext_lazy('Autor'),
+        max_length=255,
+        help_text=ugettext_lazy(
+            "Beispiel: 'Frank Martin'."))
+    weight = models.IntegerField(
+        ugettext_lazy('Platzierung'),
+        default=100,
+        help_text=ugettext_lazy(
+            'Eine höhere Zahl bedeutet, dass der Eintrag auf der Startseite '
+            'weiter unten steht.'))
+
+    class Meta:
+        ordering = ('weight', 'title',)
+        verbose_name = ugettext_lazy('Aktuelle Information')
+        verbose_name_plural = ugettext_lazy('Aktuelle Informationen')
+
+    def __str__(self):
+        return ' – '.join((self.title, self.author))
+
+
 class MediaFile(models.Model):
     """
     Model for uploaded files like images.

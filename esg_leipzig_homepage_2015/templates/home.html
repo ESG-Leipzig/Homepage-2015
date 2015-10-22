@@ -49,26 +49,48 @@
             {% endif %}
         </div><!-- /.jumbotron -->
         <div id="content">
+            <!-- Veranstaltungen -->
             <h2 class="sr-only">{% trans 'Die nächsten Veranstaltungen' %}</h2>
-                {% for event in object_list %}
-                    {% if not forloop.counter|divisibleby:2 %}
-                        <div class="row marketing">
-                    {% endif %}
-                    <div class="col-lg-6">
-                        <h3>{{ event.title }}</h3>
-                        <p>
-                            <span class="label label-primary">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                <span class="sr-only">{% trans 'Datum und Uhrzeit' %}:</span>
-                                {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
-                            </span>
-                        </p>
-                        {{ event.content|safe }}
-                    </div>
-                    {% if forloop.counter|divisibleby:2 or forloop.last %}
-                        </div><!-- /.row marketing -->
-                    {% endif %}
-                {% endfor %}
+            {% for event in event_list %}
+                {% if not forloop.counter|divisibleby:2 %}
+                    <div class="row marketing">
+                {% endif %}
+                <div class="col-lg-6">
+                    <h3>{{ event.title }}</h3>
+                    <p>
+                        <span class="label label-primary">
+                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                            <span class="sr-only">{% trans 'Datum und Uhrzeit' %}:</span>
+                            {{ event.begin }} {% if event.duration %} – {{ event.end }}{% endif %}
+                        </span>
+                    </p>
+                    {{ event.content|safe }}
+                </div>
+                {% if forloop.counter|divisibleby:2 or forloop.last %}
+                    </div><!-- /.row marketing -->
+                {% endif %}
+            {% endfor %}
+            <!-- Aktuelle Informationen -->
+            <h2 class="sr-only">{% trans 'Aktuelle Informationen' %}</h2>
+            {% for news in news_list %}
+                {% if not forloop.counter|divisibleby:2 %}
+                    <div class="row marketing">
+                {% endif %}
+                <div class="col-lg-6">
+                    <h3>{{ news.title }}</h3>
+                    <p>
+                        <span class="label label-warning">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="sr-only">{% trans 'Autor' %}:</span>
+                            {{ news.author }}
+                        </span>
+                    </p>
+                    {{ news.content|safe }}
+                </div>
+                {% if forloop.counter|divisibleby:2 or forloop.last %}
+                    </div><!-- /.row marketing -->
+                {% endif %}
+            {% endfor %}
         </div><!-- /#content -->
         <footer class="footer">
             &copy; {% copyright_note %}
