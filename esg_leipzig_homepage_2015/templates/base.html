@@ -133,8 +133,10 @@
                 <footer>
                     &copy; {% copyright_note %}
                     <ul class="list-inline pull-right">
-                        <li><a href="https://github.com/ESG-Leipzig/Homepage-2015/">{% trans 'Quellcode' %}</a></li>
-                        <li><a href="{% url 'admin:index' %}" >{% trans 'Administration' %}</a></li>
+                        {% block footer_links %}
+                            <li><a href="https://github.com/ESG-Leipzig/Homepage-2015/">{% trans 'Quellcode' %}</a></li>
+                            <li><a href="{% url 'admin:index' %}" >{% trans 'Administration' %}</a></li>
+                        {% endblock %}
                     </ul>
                 </footer>
             </div><!-- /.container -->
