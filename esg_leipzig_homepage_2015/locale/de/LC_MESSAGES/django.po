@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-16 20:05+0200\n"
+"POT-Creation-Date: 2015-11-09 15:17+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Adresse (URL)"
 msgstr ""
 
-#: admin.py:86 admin.py:87
+#: admin.py:93 admin.py:94
 msgid "ESG Leipzig Administration"
 msgstr ""
 
@@ -52,7 +52,7 @@ msgid ""
 "Beispiel: 'impressum'. Jede Seite muss einen individuellen Eintrag haben."
 msgstr ""
 
-#: models.py:27 models.py:196
+#: models.py:27 models.py:196 models.py:252
 msgid "Titel"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgid ""
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:57 models.py:202
+#: models.py:57 models.py:202 models.py:258
 msgid "Inhalt (HTML)"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgid ""
 "Ebene. Unterseiten erscheinen nicht in den Menüs."
 msgstr ""
 
-#: models.py:75
+#: models.py:75 models.py:269
 msgid "Platzierung"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgid ""
 "Sprachfeldern vorzunehmen."
 msgstr ""
 
-#: models.py:205
+#: models.py:205 models.py:261
 msgid ""
 "Es können alle HTML-Tags verwendet werden. Änderungen sind immer in den "
 "Sprachfeldern vorzunehmen."
@@ -278,15 +278,43 @@ msgstr ""
 msgid "Veranstaltungen"
 msgstr ""
 
-#: models.py:252 models.py:260
+#: models.py:255
+msgid ""
+"Beispiel: 'Schrank abzugeben'. Änderungen sind immer in den Sprachfeldern "
+"vorzunehmen."
+msgstr ""
+
+#: models.py:264 templates/home.html:84
+msgid "Autor"
+msgstr ""
+
+#: models.py:267
+msgid "Beispiel: 'Frank Martin'."
+msgstr ""
+
+#: models.py:272
+msgid ""
+"Eine höhere Zahl bedeutet, dass der Eintrag auf der Startseite weiter unten "
+"steht."
+msgstr ""
+
+#: models.py:277
+msgid "Aktuelle Information"
+msgstr ""
+
+#: models.py:278 templates/home.html:74
+msgid "Aktuelle Informationen"
+msgstr ""
+
+#: models.py:289 models.py:297
 msgid "Datei"
 msgstr ""
 
-#: models.py:255
+#: models.py:292
 msgid "Hochgeladen am"
 msgstr ""
 
-#: models.py:261
+#: models.py:298
 msgid "Dateien"
 msgstr ""
 
@@ -331,11 +359,11 @@ msgstr ""
 msgid "Der rote Hahn, das Symbol der ESG"
 msgstr ""
 
-#: templates/base.html:136 templates/home.html:76
+#: templates/base.html:137 templates/home.html:98
 msgid "Quellcode"
 msgstr ""
 
-#: templates/base.html:137 templates/home.html:77
+#: templates/base.html:138 templates/home.html:99
 msgid "Administration"
 msgstr ""
 
@@ -345,6 +373,10 @@ msgstr ""
 
 #: templates/calendar.html:62
 msgid "Für mehr Infos klicke auf den Kalendereintrag."
+msgstr ""
+
+#: templates/flatpage_default.html:24
+msgid "Seite bearbeiten"
 msgstr ""
 
 #: templates/home.html:41
@@ -357,10 +389,10 @@ msgstr ""
 msgid "Weiter gehts hier"
 msgstr ""
 
-#: templates/home.html:52
+#: templates/home.html:53
 msgid "Die nächsten Veranstaltungen"
 msgstr ""
 
-#: templates/home.html:62
+#: templates/home.html:63
 msgid "Datum und Uhrzeit"
 msgstr ""
