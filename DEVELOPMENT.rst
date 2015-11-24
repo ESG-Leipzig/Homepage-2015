@@ -17,5 +17,5 @@ Run::
 Later run::
 
   $ pip install flake8 isort
-  $ flake8 --exclude="esg_leipzig_homepage_2015/migrations/" manage.py esg_leipzig_homepage_2015
-  $ isort --multi_line 3 --check-only --recursive manage.py esg_leipzig_homepage_2015
+  $ flake8 --exclude="*/migrations/" manage.py esg_leipzig_homepage_2015 esg_leipzig_newsletter_2015
+  $ isort --multi_line 3 --check-only --recursive manage.py esg_leipzig_homepage_2015 esg_leipzig_newsletter_2015

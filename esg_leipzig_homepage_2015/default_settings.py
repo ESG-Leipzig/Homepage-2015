@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'esg_leipzig_homepage_2015',
+    'esg_leipzig_newsletter_2015',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -129,3 +130,10 @@ FORMAT_MODULE_PATH = 'esg_leipzig_homepage_2015.formats'
 # Used in views.HomeView to decide how many minutes events are shown after
 # beginning.
 EVENT_DELAY_IN_MINUTES = 180
+
+
+# Email settings
+
+EMAIL_NEWSLETTER_FROM_MAIL = 'newsletter@esg-leipzig.de'
+
+EMAIL_SUBJECT_PREFIX = '[ESG Homepage] '
