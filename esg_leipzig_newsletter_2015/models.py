@@ -11,8 +11,8 @@ class Issue(models.Model):
         ugettext_lazy('Betreff'),
         max_length=255,
         help_text=ugettext_lazy(
-            "Beispiel: 'Newsletter der ESG – Wintersemester 2015/2016 – "
-            "Ausgabe 12'."))
+            "Beispiel: 'Newsletter der ESG Leipzig – Wintersemester "
+            "2015/2016 – Ausgabe 12'."))
 
     text = models.TextField(
         ugettext_lazy('Text'),

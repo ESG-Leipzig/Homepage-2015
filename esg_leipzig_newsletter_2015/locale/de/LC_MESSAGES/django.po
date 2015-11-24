@@ -1,0 +1,60 @@
+# Language file for ESG Leipzig Newsletter 2015
+# Copyright (C) 2015 ESG Leipzig
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-24 12:26+0100\n"
+"Language: de\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:8
+msgid "Newsletter der ESG Leipzig ab 2015"
+msgstr ""
+
+#: models.py:11
+msgid "Betreff"
+msgstr ""
+
+#: models.py:14
+msgid ""
+"Beispiel: 'Newsletter der ESG Leipzig – Wintersemester 2015/2016 – Ausgabe "
+"12'."
+msgstr ""
+
+#: models.py:18
+msgid "Text"
+msgstr ""
+
+#: models.py:20
+msgid ""
+"Der Newsletter wird als plain text versendet, das heißt, HTML-Tags können "
+"nicht verwendet werden."
+msgstr ""
+
+#: models.py:24
+msgid "Versendet am"
+msgstr ""
+
+#: models.py:29
+msgid "Ausgabe"
+msgstr ""
+
+#: models.py:30
+msgid "Ausgaben"
+msgstr ""
+
+#: models.py:41
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#: models.py:46
+msgid "Abonnent"
+msgstr ""
+
+#: models.py:47
+msgid "Abonnenten"
+msgstr ""
