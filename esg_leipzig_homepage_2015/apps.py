@@ -8,6 +8,11 @@ class ESGLeipzigHomepage2015AppConfig(AppConfig):
     verbose_name = ugettext_lazy('Homepage der ESG Leipzig ab 2015')
 
     def ready(self):
+        """
+        Method is called after app loading. Connects the mediafile_delete
+        receiver to Django's pre_delete signal so we delete a mediafile
+        on the filesystem if the model instance is deleted.
+        """
         from .signals import mediafile_delete
 
         MediaFile = self.get_model('MediaFile')

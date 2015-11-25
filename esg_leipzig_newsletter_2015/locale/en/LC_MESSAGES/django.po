@@ -1,0 +1,66 @@
+# Language file for ESG Leipzig Newsletter 2015
+# Copyright (C) 2015 ESG Leipzig
+# This file is distributed under the same license as the package.
+# 
+# Translators:
+# Norman Jäckel <transifex16062013@normanjaeckel.de>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Homepage-2015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-24 12:26+0100\n"
+"PO-Revision-Date: 2015-11-24 11:29+0000\n"
+"Last-Translator: Norman Jäckel <transifex16062013@normanjaeckel.de>\n"
+"Language-Team: English (http://www.transifex.com/esg-leipzig/homepage-2015/language/en/)\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:8
+msgid "Newsletter der ESG Leipzig ab 2015"
+msgstr "Newsletter of ESG Leipzig since 2015"
+
+#: models.py:11
+msgid "Betreff"
+msgstr "Subject"
+
+#: models.py:14
+msgid ""
+"Beispiel: 'Newsletter der ESG Leipzig – Wintersemester 2015/2016 – Ausgabe "
+"12'."
+msgstr "Example: 'Newsletter of ESG Leipzig – Winter Semester 2015/2016 – Issue 12'. "
+
+#: models.py:18
+msgid "Text"
+msgstr "Text"
+
+#: models.py:20
+msgid ""
+"Der Newsletter wird als plain text versendet, das heißt, HTML-Tags können "
+"nicht verwendet werden."
+msgstr "The newsletter is sent as plain text, so HTML tags can not be used."
+
+#: models.py:24
+msgid "Versendet am"
+msgstr "Mailed on"
+
+#: models.py:29
+msgid "Ausgabe"
+msgstr "Issue"
+
+#: models.py:30
+msgid "Ausgaben"
+msgstr "Issues"
+
+#: models.py:41
+msgid "E-Mail-Adresse"
+msgstr "Email address"
+
+#: models.py:46
+msgid "Abonnent"
+msgstr "Subscriber"
+
+#: models.py:47
+msgid "Abonnenten"
+msgstr "Subscribers"

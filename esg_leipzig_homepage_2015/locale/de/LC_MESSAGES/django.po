@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-09 15:17+0100\n"
+"POT-Creation-Date: 2015-11-24 12:19+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,11 +35,11 @@ msgstr ""
 msgid "Homepage der ESG Leipzig ab 2015"
 msgstr ""
 
-#: default_settings.py:84
+#: default_settings.py:85
 msgid "Deutsch"
 msgstr ""
 
-#: default_settings.py:85
+#: default_settings.py:86
 msgid "Englisch"
 msgstr ""
 
