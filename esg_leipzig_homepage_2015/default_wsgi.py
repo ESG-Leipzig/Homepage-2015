@@ -18,6 +18,6 @@ DJANGO_SETTINGS_MODULE = ''
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', DJANGO_SETTINGS_MODULE)
 
-from django.core.wsgi import get_wsgi_application  # isort:skip
+from django.core.wsgi import get_wsgi_application  # flake8:noqa isort:skip
 
 application = get_wsgi_application()
