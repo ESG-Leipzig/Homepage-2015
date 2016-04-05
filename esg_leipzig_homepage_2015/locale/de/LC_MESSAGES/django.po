@@ -5,29 +5,39 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 12:19+0100\n"
+"POT-Creation-Date: 2016-04-05 16:48+0200\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:14
+#: admin.py:17
 msgid "Beginn der Veranstaltung"
 msgstr ""
 
-#: admin.py:25
+#: admin.py:28
 msgid "In der Vergangenheit"
 msgstr ""
 
-#: admin.py:26
+#: admin.py:29
 msgid "In der Zukunft"
 msgstr ""
 
-#: admin.py:71
+#: admin.py:52
+msgid "Wiederholungen (in Wochen)"
+msgstr ""
+
+#: admin.py:54
+msgid ""
+"Die Veranstaltung wird wöchentlich wiederholt und soll deshalb mehrfach "
+"angelegt werden. Wählen Sie 0 für eine einmalige Veranstaltung."
+msgstr ""
+
+#: admin.py:117
 msgid "Adresse (URL)"
 msgstr ""
 
-#: admin.py:93 admin.py:94
+#: admin.py:139 admin.py:140
 msgid "ESG Leipzig Administration"
 msgstr ""
 
