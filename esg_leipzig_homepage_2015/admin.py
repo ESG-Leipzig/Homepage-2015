@@ -1,3 +1,6 @@
+from datetime import timedelta
+
+from django import forms
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.utils import timezone
@@ -38,6 +41,35 @@ class ComingEventsFilter(admin.SimpleListFilter):
             return queryset.filter(begin__gte=timezone.now())
 
 
+class EventAdminForm(forms.ModelForm):
+    """
+    Form for new events in the admin. Adds a field for weekly repetitions.
+
+    Attention: We mention all field explicitly. Care of translation fields if
+    you change language settings.
+    """
+    repetitions = forms.IntegerField(
+        label=ugettext_lazy('Wiederholungen (in Wochen)'),
+        help_text=ugettext_lazy(
+            'Die Veranstaltung wird wöchentlich wiederholt und soll deshalb '
+            'mehrfach angelegt werden. Wählen Sie 0 für eine einmalige '
+            'Veranstaltung.'),
+        min_value=0,
+        max_value=15,
+        initial=0)
+
+    class Meta:
+        model = Event
+        fields = (
+            'title', 'title_de', 'title_en',
+            'content', 'content_de', 'content_en',
+            'begin',
+            'duration',
+            'repetitions',
+            'on_home_before_begin',
+            'css_class_name')
+
+
 class EventAdmin(admin.ModelAdmin):
     date_hierarchy = 'begin'
     list_display = ('title', 'begin', 'duration', 'on_home_before_begin',)
@@ -45,6 +77,20 @@ class EventAdmin(admin.ModelAdmin):
 
     def get_changeform_initial_data(self, request):
         return {'content': '<p>\n\n</p>'}
+
+    def get_form(self, request, obj=None, **kwargs):
+        if obj is None:
+            form = EventAdminForm
+        else:
+            form = super().get_form(request, obj, **kwargs)
+        return form
+
+    def save_model(self, request, obj, form, change):
+        obj.save()
+        for repetition in range(form.cleaned_data['repetitions']):
+            obj.pk = None
+            obj.begin = obj.begin + timedelta(weeks=1)
+            obj.save()
 
 
 class FlatPageAdmin(admin.ModelAdmin):
