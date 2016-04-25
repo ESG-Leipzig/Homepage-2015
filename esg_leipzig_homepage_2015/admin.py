@@ -87,10 +87,11 @@ class EventAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.save()
-        for repetition in range(form.cleaned_data['repetitions']):
-            obj.pk = None
-            obj.begin = obj.begin + timedelta(weeks=1)
-            obj.save()
+        if not change:
+            for repetition in range(form.cleaned_data['repetitions']):
+                obj.pk = None
+                obj.begin = obj.begin + timedelta(weeks=1)
+                obj.save()
 
 
 class FlatPageAdmin(admin.ModelAdmin):
